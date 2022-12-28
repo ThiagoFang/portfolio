@@ -1,11 +1,11 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Header } from "./components/common/Header";
 import { MainRoutes } from "./MainRoutes";
 
 
 const App = () => {
   return(
     <>
-      <div>Header</div>
+      <Header />
       <MainRoutes />
       <div>Footer</div>
     </>
