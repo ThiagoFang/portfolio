@@ -9,11 +9,19 @@ interface IChildren {
 export const ColorProvider = ({ children }: IChildren) => {
   const { state, dispatch } = useColors();
 
-  useEffect(() => {
-    console.log(state.mainColor);
-  }, []);
-
   return (
-    <C.Provider props={{ MainColor: state.mainColor }}>{children}</C.Provider>
+    <C.Provider
+      props={{
+        mainColor: state.mainColor,
+        mainSubColor: state.mainSubColor,
+        backgroundColor: state.backgroundColor,
+        secondaryBackground: state.secondaryBackground,
+        textColor: state.textColor,
+        textLightColor: state.textLightColor,
+        textSecondaryColor: state.textSecondaryColor,
+      }}
+    >
+      {children}
+    </C.Provider>
   );
 };
