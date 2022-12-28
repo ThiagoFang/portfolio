@@ -8,7 +8,7 @@ interface IProps {
 export const ContextProviders = ({ children }: IProps) => {
   return(
     <ColorsProvider>
-      {children};
+      {children}
     </ColorsProvider>
   );
 };
