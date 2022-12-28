@@ -1,6 +1,8 @@
+import { Test } from "./components/common/test/Test";
+
 const App = () => {
   return(
-    <div>hello world</div>
+    <Test />
   );
 };
 
