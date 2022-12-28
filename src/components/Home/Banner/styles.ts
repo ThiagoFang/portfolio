@@ -4,14 +4,14 @@ export const Container = styled.section`
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  background-color: var(--secondary-background);
+  background-color: var(--background-color);
 `;
 
 export const Video = styled.video`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: .4;
+  opacity: .2;
 `;
 
 export const ContentArea = styled.div`
