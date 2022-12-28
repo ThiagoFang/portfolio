@@ -1,7 +1,10 @@
-import React from 'react'
+import { Banner } from '../../components/Home/Banner';
+import * as C from './styles';
 
 export const Home = () => {
   return (
-    <div>Home</div>
+    <C.Container>
+      <Banner />
+    </C.Container>
   )
 }
