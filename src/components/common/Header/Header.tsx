@@ -1,9 +1,9 @@
-import { useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import * as C from "./styles";
 
 export const Header = () => {
   const location = useLocation();
+  const navigate = useNavigate();
 
   return (
     <C.Header>
@@ -13,18 +13,23 @@ export const Header = () => {
             <img src="/assets/svg/logo.svg" />
           </Link>
           <C.NavMenu>
-            <C.NavItem className={location.pathname === "/" ? "selected" : ""}>
-              <Link to="/">Home</Link>
+            <C.NavItem
+              className={location.pathname === "/" ? "selected" : ""}
+              onClick={() => navigate("/")}
+            >
+              Home
             </C.NavItem>
             <C.NavItem
               className={location.pathname === "/about" ? "selected" : ""}
+              onClick={() => navigate("/about")}
             >
-              <Link to="/about">Sobre Mim</Link>
+              Sobre Mim
             </C.NavItem>
             <C.NavItem
               className={location.pathname === "/projects" ? "selected" : ""}
+              onClick={() => navigate("/projects")}
             >
-              <Link to="/projects">Projetos</Link>
+              Projetos
             </C.NavItem>
           </C.NavMenu>
         </C.NavArea>

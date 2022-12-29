@@ -5,7 +5,7 @@ export const Header = styled.header`
   inset: 0;
   height: 8.5rem;
   z-index: 4;
-  background: linear-gradient(to left, rgba(18, 18, 20, 0.8) , transparent);
+  background: linear-gradient(to left, rgba(18, 18, 20, 0.8), transparent);
   backdrop-filter: blur(1.5rem);
   box-shadow: 2px 2px 1.6rem rgba(0, 0, 0, 0.3);
 `;
@@ -44,21 +44,23 @@ export const NavItem = styled.li`
   padding: 3rem 0;
   text-transform: uppercase;
   cursor: pointer;
+  color: var(--text-light);
 
   &:before {
     content: " ";
     position: absolute;
-    background: linear-gradient(to left,transparent,var(--main-color),transparent);
+    background: linear-gradient(
+      to left,
+      transparent,
+      var(--main-color),
+      transparent
+    );
     transform: translateX(-105%);
     opacity: 0;
     width: 8rem;
     height: 1px;
-    bottom: .5rem;
-    transition: opacity .8s ease-in-out;
-  }
-
-  a {
-    color: var(--text-light);
+    bottom: 0.5rem;
+    transition: opacity 0.8s ease-in-out;
   }
 
   &:hover::before {
@@ -66,11 +68,11 @@ export const NavItem = styled.li`
     animation: infinteSlide 3s linear infinite;
   }
 
-  &:hover a {
+  &:hover {
     color: var(--text-color);
   }
 
-  &.selected a {
+  &.selected {
     color: var(--text-color);
   }
 
