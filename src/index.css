@@ -20,3 +20,26 @@ ul {
 a {
   text-decoration: none;
 }
+
+html{
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  width: 15px;
+  cursor: pointer;
+}
+
+body::-webkit-scrollbar-track {
+  background: #313131;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #0B0B0C;    
+  border-radius: 4px;
+  border: 1px solid rgba( 255, 255, 255, .2);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  border: 1px solid #1DE9B6;
+} 
