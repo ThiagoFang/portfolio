@@ -64,3 +64,15 @@ export const WordBox = styled.div`
 export const Word = styled.div`
 
 `;
+
+export const SubTitle = styled.div`
+  color: var(--text-light);
+`;
+
+export const ButtonsArea = styled.div`
+  display: flex;
+  margin-top: 4.8rem;
+  align-items: center;
+  justify-content: center;
+  gap: 2.4rem;
+`;

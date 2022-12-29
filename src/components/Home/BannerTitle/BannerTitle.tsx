@@ -1,4 +1,5 @@
-import * as C from './styles';
+import { LinkButton } from "../../common/LinkButton";
+import * as C from "./styles";
 
 export const BannerTitle = () => {
   return (
@@ -15,7 +16,21 @@ export const BannerTitle = () => {
           </C.WordBox>
         </C.WordsBox>
       </C.TitleBox>
-      Desenvolvimento ágil e eficiente
+      <C.SubTitle>Desenvolvimento ágil e eficiente</C.SubTitle>
+      <C.ButtonsArea>
+        <LinkButton
+          title="GitHub"
+          icon="ri-github-fill"
+          isLink
+          to="https://github.com/ThiagoFang"
+        />
+        <LinkButton
+          title="Linkedin"
+          icon="ri-linkedin-box-fill"
+          isLink
+          to="https://www.linkedin.com/in/thiago-lima-46463715a/"
+        />
+      </C.ButtonsArea>
     </C.Containter>
-  )
-}
+  );
+};
