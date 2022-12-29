@@ -35,13 +35,12 @@ export const WordsBox = styled.div`
 export const WordBox = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  text-align: start;
   gap: 1.6rem;
   text-align: left;
   animation: rotate 12s linear infinite;
   height: 100%;
 
-  
   @keyframes rotate {
     0%,
     22% {
@@ -55,15 +54,14 @@ export const WordBox = styled.div`
     70% {
       transform: translateY(-15rem);
     }
-    75%, 100% {
+    75%,
+    100% {
       transform: translateY(-22.5rem);
     }
   }
 `;
 
-export const Word = styled.div`
-
-`;
+export const Word = styled.div``;
 
 export const SubTitle = styled.div`
   color: var(--text-light);
