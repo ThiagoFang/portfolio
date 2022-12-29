@@ -1,9 +1,20 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import * as C from "./styles";
+import { ColorsActions, useColors } from "../../../context/SettingsContext";
 
 export const Header = () => {
+  const { state, dispatch } = useColors();
+
   const location = useLocation();
   const navigate = useNavigate();
+
+  const changeMainColor = () => {
+    if (state.mainColor === "#1DE9B6") {
+      dispatch({ type: ColorsActions.setMainColor, payload: "#CC30FF" });
+      return;
+    }
+    dispatch({ type: ColorsActions.setMainColor, payload: "#1DE9B6" });
+  };
 
   return (
     <C.Header>
@@ -35,7 +46,7 @@ export const Header = () => {
         </C.NavArea>
 
         <C.IconsArea>
-          <i className="ri-contrast-2-line icon"></i>
+          <i className="ri-contrast-2-line icon" onClick={changeMainColor}></i>
           <i className="ri-settings-3-line icon"></i>
         </C.IconsArea>
       </C.Container>
