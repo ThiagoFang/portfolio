@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import { BannerTitle } from "../BannerTitle";
+import { DigitalClock } from "../DigitalClock";
 import * as C from "./styles";
 import videoBg from "/assets/video/video_color.mp4";
 
@@ -26,6 +27,7 @@ export const Banner = () => {
     <C.Container>
       <C.Video ref={videoRef} src={videoBg} autoPlay loop muted />
       <C.ContentArea>
+        <DigitalClock />
         <C.PlayPause
           onClick={handleToggleVideo}
           className={`ri-pause-fill ${pause ? "active" : ""}`}
