@@ -5,6 +5,13 @@ const ArrowArea = styled.a`
   bottom: 4rem;
   cursor: pointer;
 
+  &:hover {
+    span:nth-child(2) {
+      border-bottom: 3px solid var(--main-color);
+      border-right: 3px solid var(--main-color);
+    }
+  }
+
   span:nth-child(2) {
     animation-delay: -0.2s;
   }
