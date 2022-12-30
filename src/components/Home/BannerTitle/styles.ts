@@ -19,7 +19,7 @@ export const TitleBox = styled.div`
 `;
 
 export const Name = styled.h1`
-  font-size: 4.8rem;
+  font-size: var(--h1-size);
   text-transform: uppercase;
 `;
 
@@ -65,6 +65,7 @@ export const Word = styled.div``;
 
 export const SubTitle = styled.div`
   color: var(--text-light);
+  font-size: var(--h3-size);
 `;
 
 export const ButtonsArea = styled.div`

@@ -20,6 +20,6 @@ export const Container = styled.div`
   }
 
   img {
-    width: 30rem;
+    width: 30vh;
   }
 `;

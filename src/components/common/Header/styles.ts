@@ -45,6 +45,7 @@ export const NavItem = styled.li`
   text-transform: uppercase;
   cursor: pointer;
   color: var(--text-light);
+  font-size: var(--bigger-font);
 
   &:before {
     content: " ";
@@ -94,7 +95,7 @@ export const IconsArea = styled.div`
 
   .icon {
     color: var(--main-subcolor);
-    font-size: 2.4rem;
+    font-size: calc(var(--h2-size) - 0.6rem);
     cursor: pointer;
     transition: color 0.1s ease-in-out;
 
