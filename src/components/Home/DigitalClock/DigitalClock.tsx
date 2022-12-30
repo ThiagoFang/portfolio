@@ -35,8 +35,9 @@ export const DigitalClock = () => {
 
   return (
     <C.Container>
-      <C.Hour>{clock.hour}</C.Hour>:<C.Minutes>{clock.minutes}</C.Minutes>:
-      <C.Seconds>{clock.seconds}</C.Seconds>
+      <C.Hour className="prevent-select">{clock.hour}</C.Hour>:
+      <C.Minutes className="prevent-select">{clock.minutes}</C.Minutes>:
+      <C.Seconds className="prevent-select">{clock.seconds}</C.Seconds>
     </C.Container>
   );
 };

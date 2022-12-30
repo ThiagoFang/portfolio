@@ -7,6 +7,15 @@ export const Container = styled.div`
   left: 3.2rem;
   bottom: 3.2rem;
   font-weight: 500;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+
+  .prevent-select {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+  }
 `;
 
 export const Hour = styled.div`
