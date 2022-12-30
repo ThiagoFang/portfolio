@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import { ArrowDown } from "../../common/ArrowDown";
 import { BannerTitle } from "../BannerTitle";
 import { DigitalClock } from "../DigitalClock";
 import * as C from "./styles";
@@ -27,6 +28,7 @@ export const Banner = () => {
     <C.Container>
       <C.Video ref={videoRef} src={videoBg} autoPlay loop muted />
       <C.ContentArea>
+        <ArrowDown to="/" />
         <DigitalClock />
         <C.PlayPause
           onClick={handleToggleVideo}
