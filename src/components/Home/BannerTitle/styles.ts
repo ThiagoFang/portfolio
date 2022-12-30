@@ -26,7 +26,7 @@ export const Name = styled.h1`
 export const WordsBox = styled.div`
   overflow: hidden;
   color: var(--main-color);
-  font-size: 4.8rem;
+  font-size: var(--h1-size);
   font-weight: 600;
   min-width: 20rem;
   height: 6rem;
