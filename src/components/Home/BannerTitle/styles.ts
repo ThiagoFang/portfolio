@@ -24,7 +24,6 @@ export const Name = styled.h1`
 `;
 
 export const WordsBox = styled.div`
-  overflow: hidden;
   color: var(--main-color);
   font-size: var(--h1-size);
   font-weight: 600;
@@ -36,32 +35,42 @@ export const WordBox = styled.div`
   display: flex;
   flex-direction: column;
   text-align: start;
-  gap: 1.6rem;
   text-align: left;
-  animation: rotate 12s linear infinite;
   height: 100%;
+  display: none;
 
-  @keyframes rotate {
-    0%,
-    22% {
+  &.textIn {
+    display: flex;
+    animation: textin 0.5s ease;
+  }
+  &.textOut {
+    display: flex;
+    animation: textOut 0.5s linear infinite;
+  }
+
+  @keyframes textin {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
       transform: translateY(0);
     }
-    27%,
-    49% {
-      transform: translateY(-7.5rem);
+  }
+
+  @keyframes textOut {
+    0% {
+      transform: translateY(0);
     }
-    54%,
-    70% {
-      transform: translateY(-15rem);
-    }
-    75%,
     100% {
-      transform: translateY(-22.5rem);
+      transform: translateY(-100%);
     }
   }
 `;
 
-export const Word = styled.div``;
+export const Word = styled.div`
+  background-color: red;
+  height: 100%;
+`;
 
 export const SubTitle = styled.div`
   color: var(--text-light);
