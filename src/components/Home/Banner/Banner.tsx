@@ -28,7 +28,7 @@ export const Banner = () => {
     <C.Container>
       <C.Video ref={videoRef} src={videoBg} autoPlay loop muted />
       <C.ContentArea>
-        <ArrowDown to="/" />
+        <ArrowDown to="#about" />
         <DigitalClock />
         <C.PlayPause
           onClick={handleToggleVideo}
