@@ -1,13 +1,13 @@
+import { Footer } from "./components/common/Footer";
 import { Header } from "./components/common/Header";
 import { MainRoutes } from "./MainRoutes";
 
-
 const App = () => {
-  return(
+  return (
     <>
       <Header />
       <MainRoutes />
-      <div>Footer</div>
+      <Footer />
     </>
   );
 };
