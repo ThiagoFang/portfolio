@@ -27,7 +27,7 @@ export const Provider = styled.div<{ props: IProps }>`
   --h2-low-size: 2.4rem;
 
   --h3-size: 2.4rem;
-  --h3-size: 1.8rem;
+  --h3-low-size: 1.8rem;
 
   --bigger-font: 1.6rem;
   --normal-font: 1.2rem;

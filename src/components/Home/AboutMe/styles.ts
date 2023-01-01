@@ -13,7 +13,7 @@ export const InfoContainer = styled.div`
   display: flex;
   color: var(--text-color);
   margin: auto;
-  max-width: 1024px;
+  max-width: min(60vw, 1024px);
   margin-top: 6.4rem;
   gap: 3.2rem;
 `;
@@ -67,7 +67,8 @@ export const ProjectsButton = styled(Link)`
   gap: 0.4rem;
   background-color: var(--main-color);
   color: var(--background-color);
-  font-size: var(--h3-size);
+  font-size: var(--h3-low-size);
+
   font-weight: 700;
   padding: 0.8rem 1.6rem;
   border-radius: 0.2rem;
@@ -80,19 +81,27 @@ export const ProjectsButton = styled(Link)`
   &:hover {
     opacity: 0.9;
   }
+
+  @media screen and (max-height: 768px) {
+    font-size: var(--bigger-font);
+  }
 `;
 
 export const AboutButton = styled(Link)`
   display: flex;
   gap: 0.6rem;
   align-items: center;
-  font-size: var(--h3-size);
+  font-size: var(--h3-low-size);
   font-weight: 600;
   cursor: pointer;
   color: var(--main-subcolor);
 
   .icon {
     font-size: 1.6rem;
+  }
+
+  @media screen and (max-height: 768px) {
+    font-size: var(--bigger-font);
   }
 `;
 
