@@ -8,6 +8,7 @@ export const Header = styled.header`
   background: linear-gradient(to left, rgba(18, 18, 20, 0.8), transparent);
   backdrop-filter: blur(1.5rem);
   box-shadow: 2px 2px 1.6rem rgba(0, 0, 0, 0.3);
+  /* box-shadow: 2px 2px 1.6rem var(--main-color); */
 `;
 
 export const Container = styled.div`

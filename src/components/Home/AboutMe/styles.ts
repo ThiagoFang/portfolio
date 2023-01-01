@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-  display: flex;
-  align-items: center;
+  position: relative;
+  padding: 6.4rem;
   justify-content: center;
   height: 100vh;
-  background-color: var(--secondary-background);
+  background-color: var(--background-color);
 `;
