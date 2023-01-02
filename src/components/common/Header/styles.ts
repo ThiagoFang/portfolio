@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Header = styled.header`
   position: absolute;
   inset: 0;
-  height: 8.5rem;
+  height: 9vh;
   z-index: 4;
   background: linear-gradient(to left, rgba(18, 18, 20, 0.8), transparent);
   backdrop-filter: blur(1.5rem);
@@ -23,7 +23,7 @@ export const Container = styled.div`
 export const NavArea = styled.nav`
   display: flex;
   height: 100%;
-  gap: 6.4rem;
+  gap: 3.2rem;
 
   .logo {
     width: 4.5rem;
@@ -39,14 +39,17 @@ export const NavMenu = styled.ul`
 `;
 
 export const NavItem = styled.li`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   overflow: hidden;
   font-weight: 600;
-  padding: 3rem 0;
+  height: 100%;
   text-transform: uppercase;
   cursor: pointer;
   color: var(--text-light);
-  font-size: var(--bigger-font);
+  font-size: var(--normal-font);
 
   &:before {
     content: " ";
