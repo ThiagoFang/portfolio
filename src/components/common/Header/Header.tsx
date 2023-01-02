@@ -42,6 +42,18 @@ export const Header = () => {
             >
               Projetos
             </C.NavItem>
+            <C.NavItem
+              className={location.pathname === "/projects" ? "selected" : ""}
+              onClick={() => navigate("/art")}
+            >
+              Art
+            </C.NavItem>
+            <C.NavItem
+              className={location.pathname === "/projects" ? "selected" : ""}
+              onClick={() => navigate("/contact")}
+            >
+              Contato
+            </C.NavItem>
           </C.NavMenu>
         </C.NavArea>
 
