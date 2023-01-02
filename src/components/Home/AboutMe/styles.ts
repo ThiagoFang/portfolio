@@ -32,12 +32,12 @@ export const Info = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-size: var(--h2-size);
+  font-size: var(--biggest-font-size);
   font-weight: 600;
 `;
 
 export const Desc = styled.p`
-  font-size: var(--bigger-font);
+  font-size: var(--normal-font-size);
   color: var(--text-light);
   max-width: 50rem;
   line-height: 2.1rem;
@@ -50,6 +50,7 @@ export const Desc = styled.p`
 
   @media screen and (max-height: 768px) {
     line-height: 1.5rem;
+    font-size: var(--small-font-size);
     max-width: 40rem;
   }
 `;
@@ -119,11 +120,11 @@ export const NumberBox = styled.div`
 `;
 
 export const NumberTitle = styled.h2`
-  font-size: var(--h2-size);
+  font-size: var(--h1-font-size);
 `;
 
 export const NumberDesc = styled.p`
-  font-size: var(--bigger-font);
+  font-size: var(--noraml-font-size);
 `;
 
 export const PhotoArea = styled.div`

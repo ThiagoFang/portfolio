@@ -11,6 +11,10 @@ export const Container = styled.div`
   margin-bottom: 3.2rem;
   color: var(--main-subcolor);
 
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+
   ::before {
     content: "";
     bottom: 0;
@@ -24,7 +28,7 @@ export const Container = styled.div`
 
 export const Title = styled.h1`
   margin-bottom: 0.4rem;
-  font-size: var(--h2-size);
+  font-size: var(--biggest-font-size);
   text-transform: uppercase;
   span {
     font-weight: 300;
@@ -32,7 +36,7 @@ export const Title = styled.h1`
 `;
 
 export const SubTitle = styled.h2`
-  font-size: var(--bigger-font);
+  font-size: var(--h3-font-size);
   text-transform: uppercase;
 
   font-weight: 400;

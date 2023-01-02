@@ -14,7 +14,7 @@ export const Container = styled.div`
 
 export const Title = styled.h1`
   color: var(--text-color);
-  font-size: var(--h2-size);
+  font-size: var(--biggest-font-size);
   max-width: 30vw;
   text-align: center;
   font-weight: 600;
@@ -31,7 +31,7 @@ export const ProjectsButton = styled(Link)`
   gap: 0.4rem;
   background-color: var(--main-color);
   color: var(--background-color);
-  font-size: var(--h3-low-size);
+  font-size: var(--h3-font-size);
   font-weight: 700;
   padding: 0.6rem 1rem;
   border-radius: 0.2rem;
@@ -46,7 +46,7 @@ export const ProjectsButton = styled(Link)`
   }
 
   @media screen and (max-height: 768px) {
-    font-size: var(--bigger-font);
+    font-size: var(--small-font-size);
   }
 `;
 
@@ -54,7 +54,7 @@ export const AboutButton = styled(Link)`
   display: flex;
   gap: 0.6rem;
   align-items: center;
-  font-size: var(--h3-low-size);
+  font-size: var(--h3-font-size);
   font-weight: 600;
   cursor: pointer;
   color: var(--main-subcolor);
@@ -64,6 +64,6 @@ export const AboutButton = styled(Link)`
   }
 
   @media screen and (max-height: 768px) {
-    font-size: var(--bigger-font);
+    font-size: var(--small-font-size);
   }
 `;

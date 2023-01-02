@@ -19,13 +19,13 @@ export const TitleBox = styled.div`
 `;
 
 export const Name = styled.h1`
-  font-size: var(--h1-size);
+  font-size: var(--biggest-font-size);
   text-transform: uppercase;
 `;
 
 export const WordsBox = styled.div`
   color: var(--main-color);
-  font-size: var(--h1-size);
+  font-size: var(--biggest-font-size);
   overflow: hidden;
   font-weight: 600;
   min-width: 20rem;
@@ -83,7 +83,7 @@ export const Word = styled.div`
 
 export const SubTitle = styled.div`
   color: var(--text-light);
-  font-size: var(--h3-size);
+  font-size: var(--h3-font-size);
 `;
 
 export const ButtonsArea = styled.div`

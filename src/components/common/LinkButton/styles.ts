@@ -91,7 +91,7 @@ export const Icon = styled.div`
 
 export const Text = styled.span`
   z-index: 1;
-  font-size: calc(var(--bigger-font) + 0.2rem);
+  font-size: var(--h2-font-size);
   font-weight: 600;
   transition: 0.25s ease-in-out;
 `;

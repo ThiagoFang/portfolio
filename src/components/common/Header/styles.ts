@@ -35,7 +35,7 @@ export const NavMenu = styled.ul`
   display: flex;
   align-items: center;
   height: 100%;
-  gap: 4.8rem;
+  gap: 2.4rem;
 `;
 
 export const NavItem = styled.li`
@@ -49,7 +49,7 @@ export const NavItem = styled.li`
   text-transform: uppercase;
   cursor: pointer;
   color: var(--text-light);
-  font-size: var(--normal-font);
+  font-size: var(--normal-font-size);
 
   &:before {
     content: " ";
@@ -99,7 +99,7 @@ export const IconsArea = styled.div`
 
   .icon {
     color: var(--main-subcolor);
-    font-size: calc(var(--h2-size) - 0.6rem);
+    font-size: var(--h1-font-size);
     cursor: pointer;
     transition: color 0.1s ease-in-out;
 
