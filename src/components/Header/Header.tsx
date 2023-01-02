@@ -1,6 +1,6 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import * as C from "./styles";
-import { ColorsActions, useColors } from "../../../context/SettingsContext";
+import { ColorsActions, useColors } from "../../context/SettingsContext";
 
 export const Header = () => {
   const { state, dispatch } = useColors();

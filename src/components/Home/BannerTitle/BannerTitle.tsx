@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { LinkButton } from "../../common/LinkButton";
+import { LinkButton } from "../../common/Buttons/LinkButton";
 import * as C from "./styles";
 
 export const BannerTitle = () => {

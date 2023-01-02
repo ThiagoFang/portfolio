@@ -1,6 +1,6 @@
 import { ReactNode, useEffect } from "react";
 import * as C from "./styles";
-import { ColorsActions, useColors } from "../../../context/SettingsContext";
+import { ColorsActions, useColors } from "../../../../context/SettingsContext";
 
 interface IChildren {
   children: ReactNode;
