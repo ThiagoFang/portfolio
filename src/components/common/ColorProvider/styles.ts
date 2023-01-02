@@ -20,30 +20,13 @@ export const Provider = styled.div<{ props: IProps }>`
   --text-secondary: ${(p) => p.props.textSecondaryColor};
 
   //Text Size
-  --h1-size: 4.8rem;
-  --h1-low-size: 3.2rem;
+  --biggest-font-size: 3.2rem;
 
-  --h2-size: 3.2rem;
-  --h2-low-size: 2.4rem;
+  --h1-font-size: 2.4rem;
+  --h2-font-size: 2rem;
+  --h3-size: 1.6rem;
 
-  --h3-size: 2.4rem;
-  --h3-low-size: 1.8rem;
-
-  --bigger-font: 1.6rem;
-  --normal-font: 1.2rem;
-  --lower-font: 0.8rem;
-
-  @media screen and (max-height: 768px) {
-    --h1-size: 3.2rem;
-    --h1-low-size: 2.8rem;
-
-    --h2-size: 2.8rem;
-    --h2-low-size: 2.2rem;
-
-    --h3-size: 2.2rem;
-    --h3-size: 1.6rem;
-
-    --bigger-font: 1.2rem;
-    --normal-font: 0.9rem;
-  }
+  --normal-font-size: 1.5rem;
+  --small-font-size: 1.3rem;
+  --smaller-font-size: 1.2rem;
 `;
