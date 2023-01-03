@@ -1,4 +1,3 @@
-import LoadingGif from "/assets/gif/animated_logo.gif";
 import * as C from "./styles";
 import { useEffect, useState } from "react";
 import { ConfigActions, useConfig } from "../../../context/ConfigContext";
@@ -34,7 +33,7 @@ export const InitialLoading = () => {
     <C.Container
       className={`${visibility ? "notVisible" : ""} ${none ? "none" : ""}`}
     >
-      <img src={LoadingGif}></img>
+      <img src={"/assets/gif/animated_logo.gif"}></img>
     </C.Container>
   );
 };
