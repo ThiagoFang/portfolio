@@ -7,21 +7,14 @@ interface IProps {
   isLink: boolean;
   id?: string;
   to: string;
-  scrollTop?: string;
 }
 
-export const FilledButton = ({
-  icon,
-  isLink,
-  title,
-  to,
-  id,
-  scrollTop,
-}: IProps) => {
+export const FilledButton = ({ icon, isLink, title, to, id }: IProps) => {
   const navigate = useNavigate();
 
   const goTo = () => {
-    navigate(to);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setTimeout(() => navigate(to), 200);
   };
 
   const handleNavigateTo = () => {
