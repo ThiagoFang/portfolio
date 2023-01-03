@@ -1,11 +1,11 @@
 import * as C from "./styles";
 
-import React from "react";
-
 export const Projects = () => {
   return (
     <C.Container>
-      <div>Projects</div>
+      <C.Filter>
+        <div>Projects</div>
+      </C.Filter>
     </C.Container>
   );
 };
