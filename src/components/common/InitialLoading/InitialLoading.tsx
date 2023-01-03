@@ -1,23 +1,32 @@
 import LoadingGif from "/assets/gif/animated_logo.gif";
 import * as C from "./styles";
 import { useEffect, useState } from "react";
+import { ConfigActions, useConfig } from "../../../context/ConfigContext";
 
 export const InitialLoading = () => {
   const [visibility, setVisibility] = useState(false);
   const [none, setNone] = useState(false);
 
+  const { state, dispatch } = useConfig();
+
   const changeVisibility = () => {
     setTimeout(() => {
-      console.log("trocou");
       setVisibility(true);
       setTimeout(() => {
         window.scrollTo({ top: 0, behavior: "smooth" });
         setNone(true);
-      }, 200);
+        dispatch({ type: ConfigActions.setInitialLoading, payload: false });
+      }, 300);
     }, 1800);
   };
 
   useEffect(() => {
+    if (!state.initialLoading) {
+      setVisibility(true);
+      setNone(true);
+      return;
+    }
+
     changeVisibility();
   }, []);
 
