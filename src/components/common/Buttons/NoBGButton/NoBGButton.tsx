@@ -10,7 +10,7 @@ interface IProps {
   scrollTop?: string;
 }
 
-export const FilledButton = ({
+export const NoBGButton = ({
   icon,
   isLink,
   title,
@@ -32,5 +32,10 @@ export const FilledButton = ({
     goTo();
   };
 
-  return <C.Container onClick={handleNavigateTo}>{title}</C.Container>;
+  return (
+    <C.Container onClick={handleNavigateTo}>
+      {title}
+      <i className="ri-arrow-right-up-line icon"></i>
+    </C.Container>
+  );
 };

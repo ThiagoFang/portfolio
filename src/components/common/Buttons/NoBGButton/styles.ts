@@ -2,23 +2,17 @@ import styled from "styled-components";
 
 export const Container = styled.button`
   display: flex;
+  gap: 0.6rem;
   align-items: center;
-  gap: 0.4rem;
-  background-color: var(--main-color);
-  color: var(--background-color);
   font-size: var(--h3-font-size);
-  font-weight: 700;
-  padding: 0.6rem 1rem;
-  border-radius: 0.2rem;
-  border: none;
+  font-weight: 600;
   cursor: pointer;
+  color: var(--main-subcolor);
+  background: none;
+  border: none;
 
   .icon {
-    font-size: 2rem;
-  }
-
-  &:hover {
-    opacity: 0.9;
+    font-size: 1.6rem;
   }
 
   @media screen and (max-height: 768px) {

@@ -1,3 +1,5 @@
+import { FilledButton } from "../../common/Buttons/FilledButton";
+import { NoBGButton } from "../../common/Buttons/NoBGButton";
 import * as C from "./styles";
 
 export const HireMe = () => {
@@ -5,14 +7,18 @@ export const HireMe = () => {
     <C.Container>
       <C.Title>Precisando de alguem para desenvolver sua aplicação?</C.Title>
       <C.ButtonsArea>
-        <C.ProjectsButton to="/projects">
-          Meus Projetos
-          <i className="ri-arrow-drop-right-line icon"></i>
-        </C.ProjectsButton>
-        <C.AboutButton to="/about">
-          Contato
-          <i className="ri-arrow-right-up-line icon"></i>
-        </C.AboutButton>
+        <FilledButton
+          title="Meus Projetos"
+          isLink={false}
+          to="/projects"
+          icon="ri-arrow-drop-right-line"
+        />
+        <NoBGButton
+          title="Contato"
+          to="/about"
+          icon="ri-arrow-right-up-line"
+          isLink={false}
+        />
       </C.ButtonsArea>
     </C.Container>
   );
