@@ -27,7 +27,7 @@ export const Banner = () => {
     <C.Container>
       <C.Video
         ref={videoRef}
-        src="/assets/video/video_color.mp4"
+        src="/video/video_color.mp4"
         autoPlay
         loop
         muted

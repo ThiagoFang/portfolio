@@ -33,7 +33,7 @@ export const InitialLoading = () => {
     <C.Container
       className={`${visibility ? "notVisible" : ""} ${none ? "none" : ""}`}
     >
-      <img src={"/assets/gif/animated_logo.gif"}></img>
+      <img src={"/gif/animated_logo.gif"}></img>
     </C.Container>
   );
 };

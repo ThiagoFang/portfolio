@@ -57,7 +57,7 @@ export const AboutMe = () => {
           </C.Numbers>
         </C.MainInfo>
         <C.PhotoArea>
-          <C.Photo src="/assets/img/small.jpg" />
+          <C.Photo src="/img/small.jpg" />
         </C.PhotoArea>
       </C.InfoContainer>
     </C.Container>

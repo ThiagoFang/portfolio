@@ -21,7 +21,7 @@ export const Header = () => {
       <C.Container>
         <C.NavArea>
           <Link className="logo" to="/">
-            <img src="/assets/svg/logo.svg" />
+            <img src="/svg/logo.svg" />
           </Link>
           <C.NavMenu>
             <C.NavItem
