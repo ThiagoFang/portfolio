@@ -6,11 +6,7 @@ import * as C from "./styles";
 
 export const Home = () => {
   return (
-    <C.Container
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
+    <C.Container>
       <InitialLoading />
       <Banner />
       <HireMe />

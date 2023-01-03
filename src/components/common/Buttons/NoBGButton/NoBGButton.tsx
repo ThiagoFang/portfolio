@@ -14,7 +14,7 @@ export const NoBGButton = ({ icon, isLink, title, to, id }: IProps) => {
 
   const goTo = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-    setTimeout(() => navigate(to), 200);
+    setTimeout(() => navigate(to), 500);
   };
 
   const handleNavigateTo = () => {

@@ -14,7 +14,7 @@ export const LinkButton = ({ title, icon, isLink, id, to }: IProps) => {
 
   const goTo = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-    setTimeout(() => navigate(to), 200);
+    setTimeout(() => navigate(to), 500);
   };
 
   const handleNavigateTo = () => {

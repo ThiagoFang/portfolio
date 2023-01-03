@@ -3,7 +3,9 @@ import * as C from "./styles";
 export const ProjectBox = () => {
   return (
     <C.Box>
-      <div>ProjectBox</div>
+      <C.BlurArea>
+        <C.Title>Halloween Responsive WebSite</C.Title>
+      </C.BlurArea>
     </C.Box>
   );
 };

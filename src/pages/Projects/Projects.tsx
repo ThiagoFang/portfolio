@@ -1,14 +1,24 @@
-import { AnimatedGradient } from "../../components/common/Backgrounds/AnimatedGradient";
+import { SectionTitle } from "../../components/common/SectionTitle";
+import { ProjectBox } from "../../components/Projects/ProjectBox";
 import * as C from "./styles";
 
 export const Projects = () => {
   return (
-    <C.Container
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
-      <div></div>
+    <C.Container>
+      <C.Content>
+        <SectionTitle
+          normalFont="My"
+          grossFont="Projects"
+          id="projects"
+          subtitle="Meus Projetos"
+        />
+        <C.ProjectsGrid>
+          <ProjectBox />
+          <ProjectBox />
+          <ProjectBox />
+          <ProjectBox />
+        </C.ProjectsGrid>
+      </C.Content>
     </C.Container>
   );
 };
