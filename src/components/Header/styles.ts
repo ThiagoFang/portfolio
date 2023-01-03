@@ -70,7 +70,7 @@ export const NavItem = styled.li`
 
   &:hover::before {
     opacity: 1;
-    animation: infinteSlide 3s linear infinite;
+    animation: infinteSlide 2s linear infinite;
   }
 
   &:hover {

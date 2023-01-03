@@ -43,13 +43,13 @@ export const Header = () => {
               Projetos
             </C.NavItem>
             <C.NavItem
-              className={location.pathname === "/projects" ? "selected" : ""}
+              className={location.pathname === "/art" ? "selected" : ""}
               onClick={() => navigate("/art")}
             >
               Art
             </C.NavItem>
             <C.NavItem
-              className={location.pathname === "/projects" ? "selected" : ""}
+              className={location.pathname === "/contact" ? "selected" : ""}
               onClick={() => navigate("/contact")}
             >
               Contato
