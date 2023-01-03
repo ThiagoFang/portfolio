@@ -34,7 +34,8 @@ export const FilledButton = ({
 
   return (
     <C.Container id={id} onClick={handleNavigateTo}>
-      {title} <i className={`${icon} icon`}></i>
+      <span>{title}</span>
+      <i className={`${icon} icon`}></i>
     </C.Container>
   );
 };

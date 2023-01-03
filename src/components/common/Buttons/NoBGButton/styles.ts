@@ -13,6 +13,13 @@ export const Container = styled.button`
 
   .icon {
     font-size: 1.6rem;
+    transition: transform 0.1s;
+  }
+
+  &:hover {
+    .icon {
+      transform: translateX(2px);
+    }
   }
 
   @media screen and (max-height: 768px) {

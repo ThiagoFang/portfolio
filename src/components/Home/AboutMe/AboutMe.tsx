@@ -1,6 +1,8 @@
 import { SectionTitle } from "../../common/SectionTitle";
 import MyPhoto from "/assets/img/small.jpg";
 import * as C from "./styles";
+import { FilledButton } from "../../common/Buttons/FilledButton";
+import { NoBGButton } from "../../common/Buttons/NoBGButton";
 
 export const AboutMe = () => {
   return (
@@ -23,14 +25,18 @@ export const AboutMe = () => {
               muito.
             </C.Desc>
             <C.ButtonsArea>
-              <C.ProjectsButton to="/projects">
-                Meus Projetos
-                <i className="ri-arrow-drop-right-line icon"></i>
-              </C.ProjectsButton>
-              <C.AboutButton to="/about">
-                Veja Mais
-                <i className="ri-arrow-right-up-line icon"></i>
-              </C.AboutButton>
+              <FilledButton
+                icon="ri-arrow-drop-right-line"
+                title="Meus Projetos"
+                isLink={false}
+                to="/projects"
+              />
+              <NoBGButton
+                icon="ri-arrow-right-up-line"
+                title="Veja Mais"
+                isLink={false}
+                to="/about"
+              />
             </C.ButtonsArea>
           </C.Info>
 

@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 export const Container = styled.button`
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  position: relative;
   gap: 0.4rem;
   background-color: var(--main-color);
   color: var(--background-color);
@@ -14,11 +15,15 @@ export const Container = styled.button`
   cursor: pointer;
 
   .icon {
-    font-size: 2rem;
+    font-size: var(--h1-font-size);
+    transition: transform 0.1s, scale 0.1s;
   }
 
   &:hover {
-    opacity: 0.9;
+    .icon {
+      transform: translateX(2px);
+      scale: 1.1;
+    }
   }
 
   @media screen and (max-height: 768px) {
