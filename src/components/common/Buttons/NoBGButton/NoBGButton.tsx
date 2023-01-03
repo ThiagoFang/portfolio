@@ -33,9 +33,9 @@ export const NoBGButton = ({
   };
 
   return (
-    <C.Container onClick={handleNavigateTo}>
+    <C.Container id={id} onClick={handleNavigateTo}>
       {title}
-      <i className="ri-arrow-right-up-line icon"></i>
+      <i className={`${icon} icon`}></i>
     </C.Container>
   );
 };
