@@ -1,38 +1,38 @@
 import { createContext, ReactNode, useContext, useReducer } from "react";
 
 type State = {
-  mainColor: string,
-  mainSubColor: string,
-  backgroundColor: string,
-  secondaryBackground: string,
-  textColor: string,
-  textLightColor: string,
-  textSecondaryColor: string,
-}
+  mainColor: string;
+  mainSubColor: string;
+  backgroundColor: string;
+  secondaryBackground: string;
+  textColor: string;
+  textLightColor: string;
+  textSecondaryColor: string;
+};
 
 type Action = {
-  type: ColorsActions,
-  payload: any,
-}
+  type: ColorsActions;
+  payload: any;
+};
 
 type ContextType = {
-  state: State,
-  dispatch: (action: Action) => void,
+  state: State;
+  dispatch: (action: Action) => void;
 };
 
 type ProviderChildren = {
   children: ReactNode;
-}
+};
 
 const initialData = {
-  mainColor: '#1DE9B6',
-  mainSubColor: '#FFF',
-  backgroundColor: '#121214',
-  secondaryBackground: '#0B0B0C',
-  textColor: '#FFF',
-  textLightColor : '#BABABA',
-  textSecondaryColor: '#121214',
-}
+  mainColor: "#1DE9B6",
+  mainSubColor: "#FFF",
+  backgroundColor: "#121214",
+  secondaryBackground: "#0B0B0C",
+  textColor: "#FFF",
+  textLightColor: "#BABABA",
+  textSecondaryColor: "#121214",
+};
 
 //Context
 const ColorsContext = createContext<ContextType | undefined>(undefined);
@@ -51,19 +51,19 @@ export enum ColorsActions {
 export const colorsReducer = (state: State, action: Action) => {
   switch (action.type) {
     case ColorsActions.setMainColor:
-      return {...state, mainColor: action.payload};
+      return { ...state, mainColor: action.payload };
     case ColorsActions.setMainSubColor:
-      return {...state, mainSubColor: action.payload};
+      return { ...state, mainSubColor: action.payload };
     case ColorsActions.setBackgroundColor:
-      return {...state, backgroundColor: action.payload};
+      return { ...state, backgroundColor: action.payload };
     case ColorsActions.setSecondaryBackground:
-      return {...state, secondaryBackground: action.payload};
+      return { ...state, secondaryBackground: action.payload };
     case ColorsActions.setTextColor:
-      return {...state, textColor: action.payload};
+      return { ...state, textColor: action.payload };
     case ColorsActions.setLightColor:
-      return {...state, textLightColor: action.payload};
+      return { ...state, textLightColor: action.payload };
     case ColorsActions.setTextSecondaryColor:
-      return {...state, textSecondaryColor: action.payload};
+      return { ...state, textSecondaryColor: action.payload };
     default:
       return state;
   }
@@ -80,7 +80,6 @@ export const ColorsProvider = ({ children }: ProviderChildren) => {
 };
 
 // Hook
-
 export const useColors = () => {
   const context = useContext(ColorsContext);
   if (context === undefined) {

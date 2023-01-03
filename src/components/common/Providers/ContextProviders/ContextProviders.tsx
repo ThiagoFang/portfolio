@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { ConfigProvider } from "../../../../context/ConfigContext";
 import { ColorsProvider } from "../../../../context/SettingsContext";
 
 interface IProps {
@@ -6,5 +7,9 @@ interface IProps {
 }
 
 export const ContextProviders = ({ children }: IProps) => {
-  return <ColorsProvider>{children}</ColorsProvider>;
+  return (
+    <ColorsProvider>
+      <ConfigProvider>{children}</ConfigProvider>
+    </ColorsProvider>
+  );
 };
