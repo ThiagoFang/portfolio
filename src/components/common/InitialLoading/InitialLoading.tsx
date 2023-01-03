@@ -11,6 +11,7 @@ export const InitialLoading = () => {
       console.log("trocou");
       setVisibility(true);
       setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
         setNone(true);
       }, 200);
     }, 1800);
