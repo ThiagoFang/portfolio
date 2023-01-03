@@ -1,5 +1,4 @@
 import { SectionTitle } from "../../common/SectionTitle";
-import MyPhoto from "/assets/img/small.jpg";
 import * as C from "./styles";
 import { FilledButton } from "../../common/Buttons/FilledButton";
 import { NoBGButton } from "../../common/Buttons/NoBGButton";
@@ -58,7 +57,7 @@ export const AboutMe = () => {
           </C.Numbers>
         </C.MainInfo>
         <C.PhotoArea>
-          <C.Photo src={MyPhoto} />
+          <C.Photo src="/assets/img/small.jpg" />
         </C.PhotoArea>
       </C.InfoContainer>
     </C.Container>
