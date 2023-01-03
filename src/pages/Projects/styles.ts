@@ -12,7 +12,7 @@ export const Container = styled.section`
     position: absolute;
     display: block;
     border-radius: 50%;
-    opacity: 0.1;
+    opacity: 0.5;
     background-color: var(--main-color);
     transition: background 0.2s;
   }
@@ -20,29 +20,29 @@ export const Container = styled.section`
   ::before {
     bottom: -20rem;
     left: -20rem;
-    width: 50rem;
-    height: 50rem;
-    animation: beforeBounce 8s linear infinite;
+    width: 35rem;
+    height: 35rem;
+    animation: beforeBounce 4s linear infinite;
   }
 
   ::after {
     top: -20rem;
     right: -20rem;
-    width: 50rem;
-    height: 50rem;
-    animation: afterBounce 8s linear infinite;
+    width: 30rem;
+    height: 30rem;
+    animation: afterBounce 4s linear infinite;
     animation-delay: 2s;
   }
 
   @keyframes beforeBounce {
     70% {
-      transform: scale(1.3) translate(20px);
+      transform: scale(1.2) translate(100px);
     }
   }
 
   @keyframes afterBounce {
     70% {
-      transform: scale(1.3) translate(-50px);
+      transform: scale(1.2) translate(-100px);
     }
   }
 `;
@@ -50,8 +50,5 @@ export const Container = styled.section`
 export const Filter = styled.div`
   z-index: 2;
   backdrop-filter: blur(10rem);
-  -webkit-backdrop-filter: blur(10rem);
   flex: 1;
 `;
-
-export const ContentContainer = styled.div``;
