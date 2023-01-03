@@ -3,7 +3,6 @@ import { ArrowDown } from "../../common/ArrowDown";
 import { BannerTitle } from "../BannerTitle";
 import { DigitalClock } from "../DigitalClock";
 import * as C from "./styles";
-import videoBg from "/assets/video/video_color.mp4";
 
 export const Banner = () => {
   const [pause, setPause] = useState(true);
@@ -26,7 +25,13 @@ export const Banner = () => {
 
   return (
     <C.Container>
-      <C.Video ref={videoRef} src={videoBg} autoPlay loop muted />
+      <C.Video
+        ref={videoRef}
+        src="/assets/video/video_color.mp4"
+        autoPlay
+        loop
+        muted
+      />
       <C.ContentArea>
         <ArrowDown to="#about" />
         <DigitalClock />
