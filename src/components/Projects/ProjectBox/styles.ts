@@ -31,4 +31,5 @@ export const SubTitle = styled.p`
 
 export const ButtonsArea = styled.div`
   display: flex;
+  gap: 1rem;
 `;

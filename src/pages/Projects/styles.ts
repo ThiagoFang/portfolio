@@ -1,11 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-  display: flex;
-  flex-direction: column;
   position: relative;
   background-color: var(--secondary-background);
-  z-index: -2;
 
   ::before,
   ::after {
@@ -55,6 +52,7 @@ export const Filter = styled.div`
   padding-top: 12rem;
   height: 100%;
   backdrop-filter: blur(10rem);
+  z-index: 5;
 `;
 
 export const Content = styled.div`
@@ -64,6 +62,7 @@ export const Content = styled.div`
   height: 100%;
   align-items: center;
   gap: 3.2rem;
+  z-index: 1;
 `;
 
 export const ProjectsGrid = styled.div`
