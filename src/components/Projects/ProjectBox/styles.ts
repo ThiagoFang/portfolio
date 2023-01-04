@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-export const Box = styled.div`
-  background-image: url("/img/banner_img.jpg");
+export const Box = styled.div<{ img: string }>`
+  background-image: url(${(p) => p.img});
   background-size: cover;
   background-position: center;
   height: 30rem;
@@ -13,15 +13,20 @@ export const Box = styled.div`
 
 export const BlurArea = styled.div`
   background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(1rem);
+  backdrop-filter: blur(1.2rem);
   width: 100%;
   padding: 2.4rem 1.6rem;
 `;
 
-export const Title = styled.div`
+export const Title = styled.h3`
   color: var(--text-color);
   font-size: var(--normal-font-size);
   font-weight: 700;
+`;
+
+export const SubTitle = styled.p`
+  color: var(--text-light);
+  font-size: var(--small-font-size);
 `;
 
 export const ButtonsArea = styled.div`
