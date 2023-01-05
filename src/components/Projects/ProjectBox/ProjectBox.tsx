@@ -1,34 +1,42 @@
 import { ExpandableButton } from "../../common/Buttons/ExpandableButton";
+import { IProject } from "../../../types/IProjects";
 import * as C from "./styles";
 
-export const ProjectBox = () => {
+export const ProjectBox = ({
+  title,
+  description,
+  image,
+  links,
+  shortName,
+  techs,
+}: IProject) => {
   return (
-    <C.Box img="https://i.postimg.cc/2SSNLk7F/teste.png">
+    <C.Box img={image}>
       <C.TechsArea>
-        <C.Tech src="/svg_icons/html.svg" />
-        <C.Tech src="/svg_icons/css.svg" />
-        <C.Tech src="/svg_icons/javascript.svg" />
+        {techs.map((tech, key) => (
+          <C.Tech key={key} src={`/svg_icons/${tech}.svg`} />
+        ))}
       </C.TechsArea>
 
       <C.BlurArea>
-        <C.Title>Halloween Responsive WebSite</C.Title>
-        <C.SubTitle>
-          Um site de halloween 100% responsivo e com mobile first
-        </C.SubTitle>
+        <C.Title>{title}</C.Title>
+        <C.SubTitle>{description}</C.SubTitle>
         <C.ButtonsArea>
           <ExpandableButton
-            to="about"
+            to={`/projects/${shortName}`}
             title="Teste"
             icon="ri-more-fill"
             isLink={false}
           />
 
-          <ExpandableButton
-            to="about"
-            title="Teste"
-            icon="ri-arrow-right-up-line"
-            isLink
-          />
+          {links.external && (
+            <ExpandableButton
+              to={links.external}
+              title="Teste"
+              icon="ri-arrow-right-up-line"
+              isLink
+            />
+          )}
         </C.ButtonsArea>
       </C.BlurArea>
     </C.Box>
