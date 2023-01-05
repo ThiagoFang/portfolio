@@ -1,4 +1,10 @@
-type Techs = "html" | "css" | "javascript" | "typescript" | "react" | "node";
+export type Techs =
+  | "html"
+  | "css"
+  | "javascript"
+  | "typescript"
+  | "react"
+  | "node";
 
 export interface IProject {
   title: string;

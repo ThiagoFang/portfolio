@@ -50,11 +50,15 @@ export const Title = styled.h3`
   color: var(--text-color);
   font-size: var(--normal-font-size);
   font-weight: 700;
+  height: 2rem;
+  overflow: hidden;
 `;
 
 export const SubTitle = styled.p`
   color: var(--text-light);
   font-size: var(--smaller-font-size);
+  height: 3.2rem;
+  overflow: hidden;
 `;
 
 export const ButtonsArea = styled.div`
