@@ -1,18 +1,4 @@
-type Techs = "html" | "css" | "javascript" | "typescript" | "react" | "node";
-
-interface IProject {
-  title: string;
-  description: string;
-  shortName: string;
-  image: string;
-  links: {
-    github: string;
-    external?: string;
-  };
-  techs: Techs[];
-}
-
-type Projects = IProject[];
+import { Projects } from "../types/IProjects";
 
 export const projects: Projects = [
   {
