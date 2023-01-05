@@ -69,4 +69,15 @@ export const projects: Projects = [
     },
     techs: ["html", "css"],
   },
+  {
+    title: "Fighting Game",
+    description: "Um Jogo de luta em HTML e Javascript",
+    shortName: "fightgame",
+    image: "https://i.postimg.cc/kM61M9TZ/fight.jpg",
+    links: {
+      github: "https://github.com/ThiagoFang/fighting-game-javascript",
+      external: "https://thiagofang-fighting-game.netlify.app/",
+    },
+    techs: ["html", "css"],
+  },
 ];

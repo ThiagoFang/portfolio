@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Container = styled.section`
   position: relative;
   background-color: var(--secondary-background);
+  overflow: hidden;
 
   ::before,
   ::after {
@@ -24,13 +25,14 @@ export const Container = styled.section`
   }
 
   ::after {
-    width: 35rem;
-    height: 35rem;
+    width: 60rem;
+    height: 60rem;
     top: 6rem;
-    z-index: -1;
+    z-index: 0;
     right: -25rem;
     animation: afterBounce 8s linear infinite;
     animation-delay: 4s;
+    filter: blur(20rem);
   }
 
   @keyframes beforeBounce {
@@ -50,6 +52,7 @@ export const Filter = styled.div`
   width: 100%;
   min-height: 100vh;
   padding-top: 12rem;
+  padding-bottom: 4.8rem;
   height: 100%;
   backdrop-filter: blur(10rem);
   z-index: 5;
