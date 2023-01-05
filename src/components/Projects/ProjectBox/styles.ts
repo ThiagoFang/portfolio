@@ -18,17 +18,24 @@ export const TechsArea = styled.div`
   height: max-content;
   width: max-content;
   gap: 0.8rem;
-  inset: 1.6rem;
+  top: 0.8rem;
+  right: 0.8rem;
+  padding: 0.6rem 0.8rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(0.5rem);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
 `;
 
 export const Tech = styled.img`
   width: 1.6rem;
   height: 1.6rem;
-  opacity: 0.5;
   cursor: pointer;
+  opacity: 0.5;
+  transition: transform 0.1s;
 
   &:hover {
     opacity: 1;
+    transform: translateY(-1px);
   }
 `;
 
