@@ -3,7 +3,7 @@ import * as C from "./styles";
 
 export const ProjectBox = () => {
   return (
-    <C.Box img="/img/teste.png">
+    <C.Box img="https://i.postimg.cc/2SSNLk7F/teste.png">
       <C.TechsArea>
         <C.Tech src="/svg_icons/html.svg" />
         <C.Tech src="/svg_icons/css.svg" />

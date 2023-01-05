@@ -34,7 +34,7 @@ export const DigitalClock = () => {
   }, []);
 
   return (
-    <C.Container>
+    <C.Container id="clock">
       <C.Hour className="prevent-select">{clock.hour}</C.Hour>:
       <C.Minutes className="prevent-select">{clock.minutes}</C.Minutes>:
       <C.Seconds className="prevent-select">{clock.seconds}</C.Seconds>

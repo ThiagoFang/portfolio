@@ -1,4 +1,5 @@
 import { SectionTitle } from "../../components/common/SectionTitle";
+import { DigitalClock } from "../../components/Home/DigitalClock";
 import { ProjectBox } from "../../components/Projects/ProjectBox";
 import * as C from "./styles";
 
@@ -7,6 +8,7 @@ export const Projects = () => {
     <C.Container>
       <C.Filter>
         <C.Content>
+          <DigitalClock />
           <SectionTitle
             normalFont="My"
             grossFont="Projects"
@@ -14,7 +16,6 @@ export const Projects = () => {
             subtitle="Meus Projetos"
           />
           <C.ProjectsGrid>
-            <ProjectBox />
             <ProjectBox />
             <ProjectBox />
             <ProjectBox />

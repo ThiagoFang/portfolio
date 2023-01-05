@@ -7,6 +7,7 @@ export const Container = styled.div`
   left: 3.2rem;
   bottom: 3.2rem;
   font-size: var(--h3-font-size);
+  color: var(--text-color);
   font-weight: 500;
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
