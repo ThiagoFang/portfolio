@@ -33,7 +33,7 @@ export const Tech = styled.img`
 `;
 
 export const BlurArea = styled.div`
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(1.2rem);
   width: 100%;
   padding: 2.4rem 1.6rem;
@@ -47,7 +47,7 @@ export const Title = styled.h3`
 
 export const SubTitle = styled.p`
   color: var(--text-light);
-  font-size: var(--small-font-size);
+  font-size: var(--smaller-font-size);
 `;
 
 export const ButtonsArea = styled.div`

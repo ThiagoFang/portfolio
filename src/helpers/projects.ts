@@ -7,9 +7,66 @@ export const projects: Projects = [
     shortName: "halloweenWebsite",
     image: "https://i.postimg.cc/2SSNLk7F/teste.png",
     links: {
-      github: "",
+      github: "https://github.com/ThiagoFang/responsive-halloween-website",
       external: "https://thiagofang.github.io/responsive-halloween-website/",
     },
     techs: ["html", "css", "javascript"],
+  },
+  {
+    title: "Pokedex",
+    description:
+      "Um site completamente dinâmico, com base em requisições a uma API Externa",
+    shortName: "pokedex",
+    image: "https://i.postimg.cc/G3Nr47Lg/pokedex.jpg",
+    links: {
+      github: "https://github.com/ThiagoFang/pokemon-list",
+      external: "https://pokemon-list-qkuo4vrqm-thiagofang.vercel.app/",
+    },
+    techs: ["html", "css", "javascript", "react"],
+  },
+  {
+    title: "Watches Website",
+    description:
+      "Um site de venda de relógios totalmente responsivo e com várias funções",
+    shortName: "pokedex",
+    image: "https://i.postimg.cc/15tHjBDS/watches.jpg",
+    links: {
+      github: "https://github.com/ThiagoFang/responsive-watches-website",
+      external: "https://thiagofang.github.io/responsive-watches-website/",
+    },
+    techs: ["html", "css", "javascript"],
+  },
+  {
+    title: "DevMemory",
+    description: "Um jogo da memoria desenvolvido com react + TypeScript",
+    shortName: "devmemory",
+    image: "https://i.postimg.cc/85z4gmxL/memory.jpg",
+    links: {
+      github: "https://github.com/ThiagoFang/react_devMemory",
+      external: "https://react-dev-memory.vercel.app/",
+    },
+    techs: ["html", "css", "javascript", "typescript", "react"],
+  },
+  {
+    title: "Death Stranding Landing",
+    description: "Uma Landing Page sobre o jogo Death Stranding",
+    shortName: "deathstranding",
+    image: "https://i.postimg.cc/Rhnb2TnX/deathstranding.jpg",
+    links: {
+      github: "https://github.com/ThiagoFang/death-stranding-landing",
+      external: "https://thiagofang.github.io/death-stranding-landing/",
+    },
+    techs: ["html", "css"],
+  },
+  {
+    title: "Fighting Game",
+    description: "Um Jogo de luta em HTML e Javascript",
+    shortName: "fightgame",
+    image: "https://i.postimg.cc/kM61M9TZ/fight.jpg",
+    links: {
+      github: "https://github.com/ThiagoFang/fighting-game-javascript",
+      external: "https://thiagofang-fighting-game.netlify.app/",
+    },
+    techs: ["html", "css"],
   },
 ];
