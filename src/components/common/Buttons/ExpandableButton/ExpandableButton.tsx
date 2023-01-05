@@ -13,8 +13,12 @@ export const ExpandableButton = ({ icon, isLink, title, to, id }: IProps) => {
   const navigate = useNavigate();
 
   const goTo = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    setTimeout(() => navigate(to), 500);
+    if (window.scrollY >= 200) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      setTimeout(() => navigate(to), 500);
+      return;
+    }
+    navigate(to);
   };
 
   const handleNavigateTo = () => {
