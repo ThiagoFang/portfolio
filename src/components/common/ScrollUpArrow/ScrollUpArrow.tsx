@@ -4,6 +4,10 @@ import * as C from "./styles";
 export const ScrollUpArrow = () => {
   const [status, setStatus] = useState<boolean>(false);
 
+  const handleScrollUp = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   useEffect(() => {
     document.addEventListener("scroll", () => {
       if (window.scrollY > 200) {
@@ -13,14 +17,6 @@ export const ScrollUpArrow = () => {
       setStatus(false);
     });
   }, []);
-
-  const handleScrollUp = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
-  useEffect(() => {
-    console.log(status);
-  }, [status]);
 
   return (
     <C.Container onClick={handleScrollUp} className={status ? "active" : ""}>
