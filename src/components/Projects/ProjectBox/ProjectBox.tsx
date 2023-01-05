@@ -4,6 +4,12 @@ import * as C from "./styles";
 export const ProjectBox = () => {
   return (
     <C.Box img="/img/teste.png">
+      <C.TechsArea>
+        <C.Tech src="/svg_icons/html.svg" />
+        <C.Tech src="/svg_icons/css.svg" />
+        <C.Tech src="/svg_icons/javascript.svg" />
+      </C.TechsArea>
+
       <C.BlurArea>
         <C.Title>Halloween Responsive WebSite</C.Title>
         <C.SubTitle>
@@ -21,7 +27,7 @@ export const ProjectBox = () => {
             to="about"
             title="Teste"
             icon="ri-arrow-right-up-line"
-            isLink={false}
+            isLink
           />
         </C.ButtonsArea>
       </C.BlurArea>
