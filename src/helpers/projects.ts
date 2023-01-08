@@ -4,7 +4,7 @@ export const projects: Projects = [
   {
     title: "Halloween Responsive Website",
     description: "Um site de halloween 100% responsivo e com mobile first",
-    shortName: "halloweenWebsite",
+    shortName: "halloweenwebsite",
     image: "https://i.postimg.cc/Hk3CWh7h/halloween-1.jpgv",
     links: {
       github: "https://github.com/ThiagoFang/responsive-halloween-website",
@@ -28,7 +28,7 @@ export const projects: Projects = [
     title: "Watches Website",
     description:
       "Um site de venda de relógios totalmente responsivo e com várias funções",
-    shortName: "pokedex",
+    shortName: "watches",
     image: "https://i.postimg.cc/3NR4rx7b/watches-new.jpg",
     links: {
       github: "https://github.com/ThiagoFang/responsive-watches-website",
@@ -63,17 +63,6 @@ export const projects: Projects = [
     description: "Um Jogo de luta em HTML e Javascript",
     shortName: "fightgame",
     image: "https://i.postimg.cc/GtwnnNmf/fight.jpg",
-    links: {
-      github: "https://github.com/ThiagoFang/fighting-game-javascript",
-      external: "https://thiagofang-fighting-game.netlify.app/",
-    },
-    techs: ["html", "css"],
-  },
-  {
-    title: "Fighting Game",
-    description: "Um Jogo de luta em HTML e Javascript",
-    shortName: "fightgame",
-    image: "https://i.postimg.cc/kM61M9TZ/fight.jpg",
     links: {
       github: "https://github.com/ThiagoFang/fighting-game-javascript",
       external: "https://thiagofang-fighting-game.netlify.app/",
