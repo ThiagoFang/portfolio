@@ -6,6 +6,39 @@ export const Container = styled.div`
   justify-content: center;
   padding-top: 12rem;
   min-height: 100vh;
+
+  ::before,
+  ::after {
+    content: "";
+    position: absolute;
+    width: 40rem;
+    height: 40rem;
+    border-radius: 50%;
+    opacity: 0.2;
+    background-color: var(--main-color);
+    filter: blur(10rem);
+  }
+
+  ::before {
+    content: "";
+    left: -30rem;
+    animation: beforeBounce 6s ease-in-out infinite;
+  }
+  ::after {
+    right: -30rem;
+    top: 0;
+  }
+
+  @keyframes beforeBounce {
+    60% {
+      transform: scale(1.3) translate(50px);
+    }
+  }
+  @keyframes afterBounce {
+    60% {
+      transform: scale(1.3) translate(-50px);
+    }
+  }
 `;
 
 export const ProjectContainer = styled.div`
