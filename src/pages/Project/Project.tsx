@@ -36,11 +36,15 @@ export const Project = () => {
                 />
               ))}
             </C.TechsArea>
-            <InfoField icon="ri-focus-2-line" title="Sobre" text="teste" />
+            <InfoField
+              icon="ri-focus-2-line"
+              title="Sobre"
+              text={project.description.about}
+            />
             <InfoField
               icon="ri-clipboard-line"
               title="Minha Experiência"
-              text="Teste"
+              text={project.description.experience}
             />
             <Buttons
               github={project.links.github}
