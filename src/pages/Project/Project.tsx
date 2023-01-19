@@ -34,6 +34,16 @@ export const Project = () => {
                 />
               ))}
             </C.TechsArea>
+            <C.InfoField>
+              <C.TitleArea>
+                <C.InfoIcon className="ri-focus-2-line"></C.InfoIcon>
+                <C.InfoTitle>Sobre</C.InfoTitle>
+              </C.TitleArea>
+              <C.InfoContent>
+                Um site com temática de Halloween, interativo e com efeito de
+                scroll reveal
+              </C.InfoContent>
+            </C.InfoField>
           </C.InfoArea>
         </C.ProjectContainer>
       )}
