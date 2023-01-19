@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { projects } from "../../helpers/projects";
 import { IProject } from "../../types/IProjects";
 import { techRedirect } from "../../helpers/techRedirect";
+import { InfoField } from "../../components/Projects/InfoField";
 
 export const Project = () => {
   const [project, setProject] = useState<IProject>();
@@ -34,16 +35,12 @@ export const Project = () => {
                 />
               ))}
             </C.TechsArea>
-            <C.InfoField>
-              <C.TitleArea>
-                <C.InfoIcon className="ri-focus-2-line"></C.InfoIcon>
-                <C.InfoTitle>Sobre</C.InfoTitle>
-              </C.TitleArea>
-              <C.InfoContent>
-                Um site com temática de Halloween, interativo e com efeito de
-                scroll reveal
-              </C.InfoContent>
-            </C.InfoField>
+            <InfoField icon="ri-focus-2-line" title="Sobre" text="teste" />
+            <InfoField
+              icon="ri-clipboard-line"
+              title="Minha Experiência"
+              text="Teste"
+            />
           </C.InfoArea>
         </C.ProjectContainer>
       )}
