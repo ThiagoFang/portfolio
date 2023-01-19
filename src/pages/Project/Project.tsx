@@ -5,8 +5,6 @@ import { projects } from "../../helpers/projects";
 import { IProject } from "../../types/IProjects";
 import { techRedirect } from "../../helpers/techRedirect";
 import { InfoField } from "../../components/Projects/InfoField";
-import { FilledButton } from "../../components/common/Buttons/FilledButton";
-import { NoBGButton } from "../../components/common/Buttons/NoBGButton";
 import { Buttons } from "../../components/Projects/Buttons";
 
 export const Project = () => {

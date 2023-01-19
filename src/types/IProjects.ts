@@ -8,7 +8,10 @@ export type Techs =
 
 export interface IProject {
   title: string;
-  description: string;
+  description: {
+    about: string;
+    experience: string;
+  };
   shortName: string;
   image: string;
   links: {
