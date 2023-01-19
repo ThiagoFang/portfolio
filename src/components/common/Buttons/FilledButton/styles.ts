@@ -16,13 +16,12 @@ export const Container = styled.button`
 
   .icon {
     font-size: var(--h1-font-size);
-    transition: transform 0.1s, scale 0.1s;
+    transition: transform 0.1s;
   }
 
   &:hover {
     .icon {
       transform: translateX(2px);
-      scale: 1.1;
     }
   }
 
