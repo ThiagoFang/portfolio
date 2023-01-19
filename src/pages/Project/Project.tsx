@@ -7,6 +7,7 @@ import { techRedirect } from "../../helpers/techRedirect";
 import { InfoField } from "../../components/Projects/InfoField";
 import { FilledButton } from "../../components/common/Buttons/FilledButton";
 import { NoBGButton } from "../../components/common/Buttons/NoBGButton";
+import { Buttons } from "../../components/Projects/Buttons";
 
 export const Project = () => {
   const [project, setProject] = useState<IProject>();
@@ -43,24 +44,10 @@ export const Project = () => {
               title="Minha Experiência"
               text="Teste"
             />
-            <C.ButtonsArea>
-              {project.links.external && (
-                <FilledButton
-                  icon="ri-arrow-right-up-line"
-                  isLink
-                  title="Acessar"
-                  to={project.links.external}
-                />
-              )}
-              {project.links.github && (
-                <NoBGButton
-                  icon="ri-github-fill"
-                  title="GitHub"
-                  to={project.links.github}
-                  isLink
-                />
-              )}
-            </C.ButtonsArea>
+            <Buttons
+              github={project.links.github}
+              external={project.links.external}
+            />
           </C.InfoArea>
         </C.ProjectContainer>
       )}

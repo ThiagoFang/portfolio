@@ -46,8 +46,3 @@ export const Tech = styled.img`
     opacity: 1;
   }
 `;
-
-export const ButtonsArea = styled.div`
-  display: flex;
-  margin-top: 3.2rem;
-`;
