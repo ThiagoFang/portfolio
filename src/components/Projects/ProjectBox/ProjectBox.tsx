@@ -25,7 +25,7 @@ export const ProjectBox = ({
 
       <C.BlurArea>
         <C.Title>{title}</C.Title>
-        <C.SubTitle>{description}</C.SubTitle>
+        <C.SubTitle>{description.short}</C.SubTitle>
         <C.ButtonsArea>
           <ExpandableButton
             to={`/projects/${shortName}`}

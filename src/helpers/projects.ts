@@ -3,7 +3,11 @@ import { Projects } from "../types/IProjects";
 export const projects: Projects = [
   {
     title: "Halloween Responsive Website",
-    description: "Um site de halloween 100% responsivo e com mobile first",
+    description: {
+      short: "Um site de halloween 100% responsivo e com mobile first",
+      about: "fringles",
+      experience: "fringles",
+    },
     shortName: "halloweenwebsite",
     image: "https://i.postimg.cc/Hk3CWh7h/halloween-1.jpgv",
     links: {
@@ -14,8 +18,12 @@ export const projects: Projects = [
   },
   {
     title: "Pokedex",
-    description:
-      "Um site completamente dinâmico, com base em requisições a uma API Externa",
+    description: {
+      short:
+        "Um site completamente dinâmico, com base em requisições a uma API Externa",
+      about: "fringles",
+      experience: "fringles",
+    },
     shortName: "pokedex",
     image: "https://i.postimg.cc/dQGBkW2s/pokedex.jpg",
     links: {
@@ -26,8 +34,12 @@ export const projects: Projects = [
   },
   {
     title: "Watches Website",
-    description:
-      "Um site de venda de relógios totalmente responsivo e com várias funções",
+    description: {
+      short:
+        "Um site de venda de relógios totalmente responsivo e com várias funções",
+      about: "fringles",
+      experience: "fringles",
+    },
     shortName: "watches",
     image: "https://i.postimg.cc/3NR4rx7b/watches-new.jpg",
     links: {
@@ -38,7 +50,11 @@ export const projects: Projects = [
   },
   {
     title: "DevMemory",
-    description: "Um jogo da memoria desenvolvido com react + TypeScript",
+    description: {
+      short: "Um jogo da memoria desenvolvido com react + TypeScript",
+      about: "fringles",
+      experience: "fringles",
+    },
     shortName: "devmemory",
     image: "https://i.postimg.cc/d1DQW8ZH/memory.jpg",
     links: {
@@ -49,7 +65,11 @@ export const projects: Projects = [
   },
   {
     title: "Death Stranding Landing",
-    description: "Uma Landing Page sobre o jogo Death Stranding",
+    description: {
+      short: "Um jogo da memoria desenvolvido com react + TypeScript",
+      about: "fringles",
+      experience: "fringles",
+    },
     shortName: "deathstranding",
     image: "https://i.postimg.cc/V6LvxJ5T/deathstranding.jpg",
     links: {
@@ -60,7 +80,11 @@ export const projects: Projects = [
   },
   {
     title: "Fighting Game",
-    description: "Um Jogo de luta em HTML e Javascript",
+    description: {
+      short: "Um Jogo de luta em HTML e Javascript",
+      about: "fringles",
+      experience: "fringles",
+    },
     shortName: "fightgame",
     image: "https://i.postimg.cc/GtwnnNmf/fight.jpg",
     links: {
