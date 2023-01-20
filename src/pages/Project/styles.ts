@@ -49,12 +49,37 @@ export const ProjectContainer = styled.div`
 `;
 
 export const ImageArea = styled.div<{ url: string }>`
+  position: relative;
   height: 400px;
   width: 350px;
   background-image: url(${(p) => p.url});
   background-position: center;
   background-size: cover;
   box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.8);
+
+  ::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 400px;
+    width: 350px;
+    margin: 0 auto;
+    transform: scale(0.7);
+    opacity: 0.2;
+    filter: blur(8rem);
+    background-color: var(--main-color);
+    animation: rotate 12s ease-in-out infinite;
+  }
+
+  @keyframes rotate {
+    60% {
+      transform: rotate(360deg);
+      transform: scale(1);
+    }
+  }
 `;
 
 export const InfoArea = styled.div`
