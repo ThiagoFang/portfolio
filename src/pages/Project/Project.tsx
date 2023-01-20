@@ -6,6 +6,7 @@ import { IProject } from "../../types/IProjects";
 import { techRedirect } from "../../helpers/techRedirect";
 import { InfoField } from "../../components/Projects/InfoField";
 import { Buttons } from "../../components/Projects/Buttons";
+import { DigitalClock } from "../../components/Home/DigitalClock";
 
 export const Project = () => {
   const [project, setProject] = useState<IProject>();
@@ -22,6 +23,7 @@ export const Project = () => {
 
   return (
     <C.Container>
+      <DigitalClock />
       {project && (
         <C.ProjectContainer>
           <C.ImageArea url={project.image} />
