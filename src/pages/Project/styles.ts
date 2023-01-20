@@ -22,11 +22,13 @@ export const Container = styled.div`
   ::before {
     content: "";
     left: -30rem;
-    animation: beforeBounce 6s ease-in-out infinite;
+    animation: beforeBounce 8s ease-in-out infinite;
   }
   ::after {
     right: -30rem;
     top: 0;
+    animation: afterBounce 8s ease-in-out infinite;
+    animation-delay: 3s;
   }
 
   @keyframes beforeBounce {
