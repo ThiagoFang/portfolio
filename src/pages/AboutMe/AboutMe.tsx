@@ -1,14 +1,24 @@
+import { useEffect } from "react";
 import { FilledButton } from "../../components/common/Buttons/FilledButton";
 import { NoBGButton } from "../../components/common/Buttons/NoBGButton";
 import { DigitalClock } from "../../components/Home/DigitalClock";
+import { ConfigActions, useConfig } from "../../context/ConfigContext";
 import * as C from "./styles";
 
 export const AboutMe = () => {
+  const { state, dispatch } = useConfig();
+
+  useEffect(() => {
+    dispatch({ type: ConfigActions.setInitialLoading, payload: false });
+  }, []);
+
   return (
     <C.Container>
       <DigitalClock />
       <C.MainContent>
-        <C.ImageArea />
+        <C.ImageArea>
+          <C.SocialMedia></C.SocialMedia>
+        </C.ImageArea>
         <C.TextArea>
           <C.Title>Quem sou eu?</C.Title>
           <C.Content>

@@ -89,6 +89,21 @@ export const Title = styled.h1`
   }
 `;
 
+export const SocialMedia = styled.div`
+  position: absolute;
+  display: flex;
+  gap: 0.8rem;
+  bottom: -3rem;
+  left: 10%;
+  width: 80%;
+  height: 60px;
+  background-color: rgba(11, 11, 12, 0.8);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(0.5rem);
+`;
+
+export const SocialIcon = styled.i``;
+
 export const Content = styled.p`
   font-size: var(--normal-font-size);
   color: var(--text-light);
@@ -108,8 +123,7 @@ export const ButtonsArea = styled.div`
 
   #AboutCurriculumBtn {
     .icon {
-      font-size: 2rem;
-      font-weight: 500;
+      font-size: 1.6rem;
     }
   }
 `;
