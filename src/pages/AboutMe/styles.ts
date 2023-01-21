@@ -92,17 +92,30 @@ export const Title = styled.h1`
 export const SocialMedia = styled.div`
   position: absolute;
   display: flex;
-  gap: 0.8rem;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
   bottom: -3rem;
   left: 10%;
   width: 80%;
   height: 60px;
-  background-color: rgba(11, 11, 12, 0.8);
+  background-color: rgba(255, 255, 255, 0.05);
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(0.5rem);
 `;
 
-export const SocialIcon = styled.i``;
+export const SocialIcon = styled.i`
+  color: var(--text-color);
+  font-weight: 400;
+  font-size: 2.6rem;
+  cursor: pointer;
+  transition: transform 0.1s, color 0.1s;
+
+  &:hover {
+    color: var(--main-color);
+    transform: translateY(-1px);
+  }
+`;
 
 export const Content = styled.p`
   font-size: var(--normal-font-size);

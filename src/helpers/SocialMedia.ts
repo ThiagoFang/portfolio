@@ -19,12 +19,12 @@ export const SocialMedias: ISocialMedias = [
   },
   {
     name: "instagram",
-    icon: "ri-instagram-fill",
+    icon: "ri-instagram-line",
     link: "https://www.instagram.com/thiago_fang/",
   },
   {
     name: "linkedin",
-    icon: "ri-linkedin-box-fill",
+    icon: "ri-linkedin-fill",
     link: "https://www.linkedin.com/in/thiago-lima-46463715a/",
   },
 ];

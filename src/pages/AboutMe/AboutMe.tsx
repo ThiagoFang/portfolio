@@ -3,10 +3,15 @@ import { FilledButton } from "../../components/common/Buttons/FilledButton";
 import { NoBGButton } from "../../components/common/Buttons/NoBGButton";
 import { DigitalClock } from "../../components/Home/DigitalClock";
 import { ConfigActions, useConfig } from "../../context/ConfigContext";
+import { SocialMedias } from "../../helpers/SocialMedia";
 import * as C from "./styles";
 
 export const AboutMe = () => {
   const { state, dispatch } = useConfig();
+
+  const openLink = (link: string) => {
+    window.open(link, "_blank");
+  };
 
   useEffect(() => {
     dispatch({ type: ConfigActions.setInitialLoading, payload: false });
@@ -17,7 +22,15 @@ export const AboutMe = () => {
       <DigitalClock />
       <C.MainContent>
         <C.ImageArea>
-          <C.SocialMedia></C.SocialMedia>
+          <C.SocialMedia>
+            {SocialMedias.map((item, key) => (
+              <C.SocialIcon
+                onClick={() => openLink(item.link)}
+                key={key}
+                className={item.icon}
+              ></C.SocialIcon>
+            ))}
+          </C.SocialMedia>
         </C.ImageArea>
         <C.TextArea>
           <C.Title>Quem sou eu?</C.Title>
