@@ -13,10 +13,13 @@ export const LinkButton = ({ title, icon, isLink, id, to }: IProps) => {
   const navigate = useNavigate();
 
   const goTo = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    setTimeout(() => navigate(to), 500);
+    if (window.scrollY >= 200) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      setTimeout(() => navigate(to), 500);
+      return;
+    }
+    navigate(to);
   };
-
   const handleNavigateTo = () => {
     if (isLink) {
       window.open(`${to}`, "_blank");
