@@ -18,6 +18,11 @@ export const SocialMedias: ISocialMedias = [
     link: "https://www.behance.net/Thiago-s-lima",
   },
   {
+    name: "github",
+    icon: "ri-github-fill",
+    link: "https://github.com/ThiagoFang",
+  },
+  {
     name: "instagram",
     icon: "ri-instagram-line",
     link: "https://www.instagram.com/thiago_fang/",
