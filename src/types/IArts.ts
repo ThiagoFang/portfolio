@@ -1,7 +1,4 @@
-export interface IArts {
-  arts: IArt[];
-}
-
+export type IArts = IArt[];
 export interface IArt {
   title: string;
   links: {
