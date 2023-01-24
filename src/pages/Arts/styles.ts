@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Container = styled.section`
   padding-top: 12rem;
   min-height: 100vh;
+  background-color: var(--secondary-background);
 
   ::before {
     content: "";
@@ -30,5 +31,9 @@ export const Container = styled.section`
 export const BoxGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, auto);
+  align-items: center;
+  justify-content: center;
+  gap: 3.2rem;
   max-width: 1024px;
+  margin: auto;
 `;
