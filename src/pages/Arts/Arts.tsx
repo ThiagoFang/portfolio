@@ -3,6 +3,7 @@ import * as C from "./styles";
 import { ConfigActions, useConfig } from "../../context/ConfigContext";
 import { useEffect } from "react";
 import { ArtBox } from "../../components/Arts/ArtBox";
+import { arts } from "../../helpers/arts";
 
 export const Arts = () => {
   const { state, dispatch } = useConfig();
@@ -20,9 +21,9 @@ export const Arts = () => {
         id="arttitle"
       />
       <C.BoxGrid>
-        <ArtBox />
-        <ArtBox />
-        <ArtBox />
+        {arts.map((item, key) => (
+          <ArtBox art={item} key={key} />
+        ))}
       </C.BoxGrid>
     </C.Container>
   );

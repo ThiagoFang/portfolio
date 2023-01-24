@@ -1,14 +1,12 @@
 import styled from "styled-components";
 
-const imglink = "https://i.postimg.cc/T3pzRG31/reload.jpg";
-
-export const Container = styled.div`
+export const Container = styled.div<{ url: string }>`
   display: flex;
   align-items: flex-end;
   width: 30rem;
   height: 45rem;
   background-color: var(--background-color);
-  background-image: url(${imglink});
+  background-image: url(${(p) => p.url});
   box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.5);
 `;
 
