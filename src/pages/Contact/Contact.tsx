@@ -2,9 +2,27 @@ import { FilledButton } from "../../components/common/Buttons/FilledButton";
 import { NoBGButton } from "../../components/common/Buttons/NoBGButton";
 import { InputBox } from "../../components/common/InputBox";
 import { SectionTitle } from "../../components/common/SectionTitle";
+
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { ContactSchema } from "../../helpers/ContactSchema";
+
+import { IContactForm } from "../../types/IContactForm";
+import { SubmitHandler } from "react-hook-form/dist/types";
+
 import * as C from "./styles";
 
 export const Contact = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<IContactForm>({ resolver: yupResolver(ContactSchema) });
+
+  const submitForm: SubmitHandler<IContactForm> = (data) => {
+    alert("Função não disponivel");
+  };
+
   return (
     <C.Container>
       <SectionTitle
@@ -13,17 +31,30 @@ export const Contact = () => {
         subtitle="Contato"
         id="contactTitle"
       />
-      <C.Form>
-        <InputBox name="Seu nome">
-          <C.BasicInput />
+      <C.Form onSubmit={handleSubmit(submitForm)}>
+        <InputBox title="Seu nome" error={errors.name?.message}>
+          <C.BasicInput
+            className={errors.name ? "error" : ""}
+            {...register("name")}
+          />
         </InputBox>
 
-        <InputBox name="E-Mail">
-          <C.BasicInput />
+        <InputBox title="E-Mail" error={errors.email?.message}>
+          <C.BasicInput
+            className={errors.email ? "error" : ""}
+            {...register("email")}
+          />
         </InputBox>
 
-        <InputBox id="contactTextArea" name="Mensagem">
-          <C.TextArea className="" />
+        <InputBox
+          id="contactTextArea"
+          error={errors.message?.message}
+          title="Mensagem"
+        >
+          <C.TextArea
+            className={errors.message ? "error" : ""}
+            {...register("message")}
+          />
         </InputBox>
 
         <C.ButtonsArea id="buttonsArea">

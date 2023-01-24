@@ -33,3 +33,9 @@ export const InputTitle = styled.p`
   font-size: var(--normal-font-size);
   color: var(--text-light);
 `;
+
+export const InputError = styled.p`
+  color: #ff0033;
+  font-size: var(--small-font-size);
+  font-weight: 500;
+`;
