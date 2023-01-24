@@ -1,5 +1,6 @@
 import { useRoutes } from "react-router-dom";
 import { AboutMe } from "./pages/AboutMe";
+import { Arts } from "./pages/Arts";
 import { Home } from "./pages/home";
 import { Project } from "./pages/Project";
 import { Projects } from "./pages/Projects";
@@ -10,7 +11,7 @@ export const MainRoutes = () => {
     { path: "/about", element: <AboutMe /> },
     { path: "/projects", element: <Projects /> },
     { path: "/projects/:project", element: <Project /> },
-    { path: "/art", element: <div>art</div> },
+    { path: "/art", element: <Arts /> },
     { path: "/contact", element: <div>contact</div> },
   ]);
 };
