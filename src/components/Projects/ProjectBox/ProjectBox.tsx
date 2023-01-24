@@ -29,7 +29,6 @@ export const ProjectBox = ({
         <C.ButtonsArea>
           <ExpandableButton
             to={`/projects/${shortName}`}
-            title="Teste"
             icon="ri-more-fill"
             isLink={false}
           />
@@ -37,7 +36,6 @@ export const ProjectBox = ({
           {links.external && (
             <ExpandableButton
               to={links.external}
-              title="Teste"
               icon="ri-arrow-right-up-line"
               isLink
             />
