@@ -7,9 +7,10 @@ interface IProps {
   isLink: boolean;
   id?: string;
   to: string;
+  action?: () => void;
 }
 
-export const NoBGButton = ({ icon, isLink, title, to, id }: IProps) => {
+export const NoBGButton = ({ icon, isLink, title, to, id, action }: IProps) => {
   const navigate = useNavigate();
 
   const goTo = () => {
@@ -30,7 +31,7 @@ export const NoBGButton = ({ icon, isLink, title, to, id }: IProps) => {
   };
 
   return (
-    <C.Container id={id} onClick={handleNavigateTo}>
+    <C.Container id={id} onClick={to != "" ? handleNavigateTo : action}>
       {title}
       <i className={`${icon} icon`}></i>
     </C.Container>

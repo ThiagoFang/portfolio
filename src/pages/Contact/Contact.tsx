@@ -23,6 +23,10 @@ export const Contact = () => {
     alert("Função não disponivel");
   };
 
+  const handleNavigateWhatsApp = () => {
+    window.open("https://wa.me/5511963501700");
+  };
+
   return (
     <C.Container>
       <SectionTitle
@@ -69,6 +73,7 @@ export const Contact = () => {
             isLink={false}
             title="Ou Entre em contato via whatsapp"
             to=""
+            action={handleNavigateWhatsApp}
           />
         </C.ButtonsArea>
       </C.Form>
