@@ -28,7 +28,6 @@ export const WordsBox = styled.div`
   font-size: var(--biggest-font-size);
   overflow: hidden;
   font-weight: 600;
-  min-width: 20rem;
   height: 6rem;
 `;
 

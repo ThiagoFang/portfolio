@@ -75,6 +75,10 @@ export const Containter = styled.button`
       box-shadow: 0 0 2px var(--main-color);
     }
   }
+
+  @media screen and (max-height: 768px) {
+    padding: 0.8rem 2.4rem;
+  }
 `;
 
 export const Icon = styled.div`
@@ -87,6 +91,10 @@ export const Icon = styled.div`
     color: #fff;
     transition: 0.25s ease-in-out;
   }
+
+  @media screen and (max-height: 768px) {
+    font-size: var(--h2-font-size);
+  }
 `;
 
 export const Text = styled.span`
@@ -94,4 +102,8 @@ export const Text = styled.span`
   font-size: var(--h2-font-size);
   font-weight: 600;
   transition: 0.25s ease-in-out;
+
+  @media screen and (max-height: 768px) {
+    font-size: var(--h3-font-size);
+  }
 `;

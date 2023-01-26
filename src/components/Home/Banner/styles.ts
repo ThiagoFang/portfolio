@@ -31,16 +31,21 @@ export const PlayPause = styled.i`
   position: absolute;
   background-color: var(--secondary-background);
   border: 0.5px solid var(--main-color);
-  border-radius: 0.4rem;
+  border-radius: 0.2rem;
   padding: 0.8rem 1.6rem;
   bottom: 3.2rem;
   right: 3.2rem;
-  font-size: 3.2;
+  font-size: var(--bigger-font-size);
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   display: none;
 
   &.active {
     display: flex;
+  }
+
+  @media screen and (max-height: 768px) {
+    font-size: var(--normal-font-size);
+    padding: 0.4rem 1rem;
   }
 `;
