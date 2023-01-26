@@ -1,11 +1,15 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   padding-top: 12rem;
+  padding-bottom: 7.8rem;
   min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
 
   ::before,
   ::after {
@@ -46,6 +50,11 @@ export const Container = styled.div`
 export const ProjectContainer = styled.div`
   display: flex;
   gap: 3.2rem;
+  z-index: 1;
+
+  @media screen and (max-width: 425px) {
+    flex-direction: column;
+  }
 `;
 
 export const ImageArea = styled.div<{ url: string }>`
@@ -56,6 +65,11 @@ export const ImageArea = styled.div<{ url: string }>`
   background-position: center;
   background-size: cover;
   box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.8);
+
+  @media screen and (max-width: 768px) {
+    height: 350px;
+    width: 300px;
+  }
 
   ::after {
     position: absolute;
@@ -84,11 +98,19 @@ export const ImageArea = styled.div<{ url: string }>`
 
 export const InfoArea = styled.div`
   max-width: 400px;
+
+  @media screen and (max-width: 768px) {
+    max-width: 300px;
+  }
 `;
 
 export const Title = styled.h2`
   color: var(--text-color);
   font-size: var(--biggest-font-size);
+
+  @media screen and (max-width: 768px) {
+    font-size: var(--h1-font-size);
+  }
 `;
 
 export const TechsArea = styled.div`
@@ -104,5 +126,9 @@ export const Tech = styled.img`
 
   &:hover {
     opacity: 1;
+  }
+
+  @media screen and (max-width: 768px) {
+    height: 1.8rem;
   }
 `;
