@@ -130,4 +130,9 @@ export const IconsArea = styled.div`
 export const MobileMenuIcon = styled.i`
   color: var(--main-color);
   font-size: var(--h1-font-size);
+  display: none;
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+  }
 `;
