@@ -8,30 +8,26 @@ import * as C from "./styles";
 export const Projects = () => {
   return (
     <C.Container>
-      <C.Filter>
-        <C.Content>
-          <DigitalClock />
-          <SectionTitle
-            normalFont="My"
-            grossFont="Projects"
-            id="projects"
-            subtitle="Meus Projetos"
+      <DigitalClock />
+      <SectionTitle
+        normalFont="My"
+        grossFont="Projects"
+        id="projects"
+        subtitle="Meus Projetos"
+      />
+      <C.ProjectsGrid>
+        {projects.map((project, key) => (
+          <ProjectBox
+            title={project.title}
+            description={project.description}
+            shortName={project.shortName}
+            image={project.image}
+            links={project.links}
+            techs={project.techs}
+            key={key}
           />
-          <C.ProjectsGrid>
-            {projects.map((project, key) => (
-              <ProjectBox
-                title={project.title}
-                description={project.description}
-                shortName={project.shortName}
-                image={project.image}
-                links={project.links}
-                techs={project.techs}
-                key={key}
-              />
-            ))}
-          </C.ProjectsGrid>
-        </C.Content>
-      </C.Filter>
+        ))}
+      </C.ProjectsGrid>
     </C.Container>
   );
 };

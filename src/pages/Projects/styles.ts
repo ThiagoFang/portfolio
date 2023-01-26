@@ -2,14 +2,20 @@ import styled from "styled-components";
 
 export const Container = styled.section`
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
   background-color: var(--secondary-background);
+  min-height: 100vh;
+  padding: 6.4rem 1.6rem;
+  padding-top: 12rem;
   overflow: hidden;
 
   ::before,
   ::after {
     content: " ";
     position: absolute;
-    z-index: 0;
     display: flex;
     opacity: 0.1;
     background-color: var(--main-color);
@@ -22,13 +28,13 @@ export const Container = styled.section`
     bottom: 6rem;
     left: -30rem;
     animation: beforeBounce 8s linear infinite;
+    filter: blur(20rem);
   }
 
   ::after {
     width: 60rem;
     height: 60rem;
     top: 6rem;
-    z-index: 0;
     right: -25rem;
     animation: afterBounce 8s linear infinite;
     animation-delay: 4s;
@@ -48,28 +54,18 @@ export const Container = styled.section`
   }
 `;
 
-export const Filter = styled.div`
-  width: 100%;
-  min-height: 100vh;
-  padding-top: 12rem;
-  padding-bottom: 4.8rem;
-  height: 100%;
-  backdrop-filter: blur(10rem);
-  z-index: 5;
-`;
-
-export const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  align-items: center;
-  gap: 3.2rem;
-  z-index: 1;
-`;
-
 export const ProjectsGrid = styled.div`
   display: grid;
   gap: 2.4rem;
   grid-template-columns: repeat(3, 30rem);
+  margin: auto;
+  margin-bottom: 3.2rem;
+  z-index: 1;
+
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: repeat(2, 30rem);
+  }
+  @media screen and (max-width: 425px) {
+    grid-template-columns: repeat(1, 30rem);
+  }
 `;
