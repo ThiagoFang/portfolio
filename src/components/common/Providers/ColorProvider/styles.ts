@@ -29,4 +29,16 @@ export const Provider = styled.div<{ props: IProps }>`
   --normal-font-size: 1.5rem;
   --small-font-size: 1.3rem;
   --smaller-font-size: 1.2rem;
+
+  @media screen and (max-height: 768px) {
+    --biggest-font-size: 2.8rem;
+
+    --h1-font-size: 2.2rem;
+    --h2-font-size: 1.8rem;
+    --h3-size: 1.6rem;
+
+    --normal-font-size: 1.3rem;
+    --small-font-size: 1.1rem;
+    --smaller-font-size: 1rem;
+  }
 `;
