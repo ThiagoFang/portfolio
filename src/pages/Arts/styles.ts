@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
+  position: relative;
   padding-top: 12rem;
+  padding-bottom: 7.8rem;
   min-height: 100vh;
   background-color: var(--secondary-background);
 
@@ -36,4 +38,12 @@ export const BoxGrid = styled.div`
   gap: 3.2rem;
   max-width: 1024px;
   margin: auto;
+  z-index: 1;
+
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: repeat(2, auto);
+  }
+  @media screen and (max-width: 425px) {
+    grid-template-columns: repeat(1, auto);
+  }
 `;
