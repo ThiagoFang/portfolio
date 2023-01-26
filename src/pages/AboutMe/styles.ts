@@ -6,6 +6,7 @@ const imageLink =
 const warning = "Imagem gerada por IA";
 
 export const Container = styled.div`
+  position: relative;
   min-height: 100vh;
   background-color: var(--secondary-background);
   display: flex;
@@ -18,6 +19,13 @@ export const MainContent = styled.div`
   display: flex;
   z-index: 1;
   gap: 3.2rem;
+  padding: 7.8rem 1.6rem;
+  padding-top: 12rem;
+
+  @media screen and (max-width: 425px) {
+    flex-direction: column;
+    text-align: center;
+  }
 `;
 
 export const ImageArea = styled.div`
@@ -29,6 +37,20 @@ export const ImageArea = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.8);
+
+  @media screen and (max-height: 768px) {
+    width: 370px;
+    height: 470px;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 300px;
+    height: 420px;
+  }
+  @media screen and (max-width: 425px) {
+    width: 250px;
+    height: 350px;
+  }
 
   ::before {
     content: "${warning}";
@@ -87,6 +109,13 @@ export const Title = styled.h1`
   &:hover {
     color: var(--main-color);
   }
+
+  @media screen and (max-width: 768px) {
+    font-size: var(--h1-font-size);
+  }
+  @media screen and (max-width: 425px) {
+    margin-top: 1.6rem;
+  }
 `;
 
 export const SocialMedia = styled.div`
@@ -115,6 +144,10 @@ export const SocialIcon = styled.i`
     color: var(--main-color);
     transform: translateY(-1px);
   }
+
+  @media screen and (max-width: 425px) {
+    font-size: 2rem;
+  }
 `;
 
 export const Content = styled.p`
@@ -126,6 +159,11 @@ export const Content = styled.p`
   span {
     color: var(--main-color);
     font-weight: 600;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: var(--small-font-size);
+    max-width: 250px;
   }
 `;
 

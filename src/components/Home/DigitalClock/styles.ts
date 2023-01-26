@@ -18,6 +18,10 @@ export const Container = styled.div`
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
   }
+
+  @media screen and (max-width: 425px) {
+    font-size: var(--small-font-size);
+  }
 `;
 
 export const Hour = styled.div`
