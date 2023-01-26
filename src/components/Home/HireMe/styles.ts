@@ -16,6 +16,11 @@ export const Title = styled.h1`
   max-width: 30vw;
   text-align: center;
   font-weight: 600;
+
+  @media screen and (max-width: 768px) {
+    max-width: 50vw;
+    font-size: var(--h1-font-size);
+  }
 `;
 
 export const ButtonsArea = styled.div`
