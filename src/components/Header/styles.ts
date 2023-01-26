@@ -8,7 +8,6 @@ export const Header = styled.header`
   background: linear-gradient(to left, rgba(18, 18, 20, 0.8), transparent);
   backdrop-filter: blur(1.5rem);
   box-shadow: 2px 2px 1.6rem rgba(0, 0, 0, 0.3);
-  /* box-shadow: 2px 2px 1.6rem var(--main-color); */
 `;
 
 export const Container = styled.div`
@@ -18,6 +17,10 @@ export const Container = styled.div`
   max-width: 1024px;
   height: 100%;
   margin: auto;
+
+  @media screen and (max-width: 1024px) {
+    padding: 0 4.8rem;
+  }
 `;
 
 export const NavArea = styled.nav`
@@ -36,6 +39,10 @@ export const NavMenu = styled.ul`
   align-items: center;
   height: 100%;
   gap: 2.4rem;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const NavItem = styled.li`
@@ -89,7 +96,11 @@ export const NavItem = styled.li`
     100% {
       transform: translateX(105%);
     }
-  } ;
+  }
+
+  @media screen and (max-width: 1024px) {
+    font-size: var(--small-font-size);
+  }
 `;
 
 export const IconsArea = styled.div`
@@ -106,5 +117,17 @@ export const IconsArea = styled.div`
     &:hover {
       color: var(--main-color);
     }
+
+    @media screen and (max-width: 1024px) {
+      font-size: var(--h2-font-size);
+    }
   }
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+`;
+
+export const MobileMenuIcon = styled.i`
+  color: var(--main-color);
+  font-size: var(--h1-font-size);
 `;

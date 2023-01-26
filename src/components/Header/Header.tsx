@@ -19,6 +19,8 @@ export const Header = () => {
   return (
     <C.Header>
       <C.Container>
+        <C.MobileMenuIcon className="ri-menu-2-line" />
+
         <C.NavArea>
           <Link className="logo" to="/">
             <img src="/svg/logo.svg" />
@@ -56,7 +58,6 @@ export const Header = () => {
             </C.NavItem>
           </C.NavMenu>
         </C.NavArea>
-
         <C.IconsArea>
           <i className="ri-contrast-2-line icon" onClick={changeMainColor}></i>
           <i className="ri-settings-3-line icon"></i>
