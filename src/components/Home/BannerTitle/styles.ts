@@ -10,17 +10,26 @@ export const Containter = styled.div`
 export const TitleBox = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 1.6rem;
 
   .arrow {
     font-size: 3.2rem;
     color: var(--main-color);
   }
+
+  @media screen and (max-width: 425px) {
+    gap: 0.8rem;
+  }
 `;
 
 export const Name = styled.h1`
   font-size: var(--biggest-font-size);
   text-transform: uppercase;
+
+  @media screen and (max-width: 425px) {
+    font-size: var(--h1-font-size);
+  }
 `;
 
 export const WordsBox = styled.div`
@@ -29,6 +38,10 @@ export const WordsBox = styled.div`
   overflow: hidden;
   font-weight: 600;
   height: 6rem;
+
+  @media screen and (max-width: 425px) {
+    font-size: var(--h1-font-size);
+  }
 `;
 
 export const WordBox = styled.div`
@@ -83,6 +96,10 @@ export const Word = styled.div`
 export const SubTitle = styled.div`
   color: var(--text-light);
   font-size: var(--h3-font-size);
+
+  @media screen and (max-width: 425px) {
+    font-size: var(--small-font-size);
+  }
 `;
 
 export const ButtonsArea = styled.div`
@@ -91,4 +108,9 @@ export const ButtonsArea = styled.div`
   align-items: center;
   justify-content: center;
   gap: 2.4rem;
+
+  @media screen and (max-width: 425px) {
+    gap: 1.6rem;
+    margin-top: 2.4rem;
+  }
 `;

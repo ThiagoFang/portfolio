@@ -79,6 +79,9 @@ export const Containter = styled.button`
   @media screen and (max-height: 768px) {
     padding: 0.8rem 2.4rem;
   }
+  @media screen and (max-width: 425px) {
+    padding: 0.8rem 1.6rem;
+  }
 `;
 
 export const Icon = styled.div`
@@ -105,5 +108,8 @@ export const Text = styled.span`
 
   @media screen and (max-height: 768px) {
     font-size: var(--h3-font-size);
+  }
+  @media screen and (max-width: 425px) {
+    font-size: var(--normal-font-size);
   }
 `;
