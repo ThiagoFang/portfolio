@@ -10,6 +10,7 @@ export const Box = styled.div<{ img: string }>`
   display: flex;
   align-items: flex-end;
   box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.5);
+  background-color: var(--background-color);
 `;
 
 export const TechsArea = styled.div`
