@@ -171,7 +171,10 @@ export const ButtonsArea = styled.div`
   display: flex;
   gap: 1.6rem;
   margin-top: 2.4rem;
-  align-self: center;
+
+  @media screen and (max-width: 425px) {
+    align-self: center;
+  }
 
   #AboutCurriculumBtn {
     .icon {
