@@ -11,7 +11,10 @@ export const Configurations = () => {
   return (
     <>
       <C.Modal className={state.settings ? "active" : ""}>
-        <div>Configurations</div>
+        <C.TitleArea>
+          <i className="ri-settings-3-line" />
+          Configurações
+        </C.TitleArea>
       </C.Modal>
       <C.BlackArea
         className={state.settings ? "active" : ""}

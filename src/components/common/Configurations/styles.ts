@@ -31,10 +31,9 @@ export const Modal = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 30vw;
+  width: 25vw;
   height: 40rem;
   background-color: var(--background-color);
-  border: 1px solid var(--main-color);
   border-radius: 2px;
   z-index: 11;
   color: var(--text-color);
@@ -44,4 +43,25 @@ export const Modal = styled.div`
     display: flex;
     animation: appear 0.1s linear;
   }
+
+  @media screen and (max-width: 1024px) {
+    width: 45vw;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 60vw;
+  }
+
+  @media screen and (max-width: 425px) {
+    width: 90vw;
+  }
+`;
+
+export const TitleArea = styled.div`
+  padding: 1.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: var(--text-light);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 `;
