@@ -5,7 +5,7 @@ export const BlackArea = styled.div`
   display: none;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.8);
   cursor: pointer;
   z-index: 9;
 
@@ -34,10 +34,11 @@ export const Modal = styled.div`
   width: 25vw;
   height: 40rem;
   background-color: var(--background-color);
-  border-radius: 2px;
+  border-radius: 0.8rem;
   z-index: 11;
   color: var(--text-color);
   box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.8);
+  overflow: hidden;
 
   &.active {
     display: flex;
@@ -63,5 +64,39 @@ export const TitleArea = styled.div`
   align-items: center;
   gap: 0.8rem;
   color: var(--text-light);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+`;
+
+export const FlexArea = styled.div`
+  display: flex;
+  flex: 1;
+`;
+
+export const OptionsList = styled.ul`
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 100%;
+  padding: 2.4rem 0;
+  background-color: var(--secondary-background);
+`;
+
+export const ConfigOption = styled.li`
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--text-light);
+  font-size: var(--normal-font-size);
+  cursor: pointer;
+  padding: 0.8rem;
+  transition: background-color 50ms;
+
+  &:hover,
+  &.selected {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--main-color);
+  }
+
+  @media screen and (max-width: 425px) {
+    font-size: var(--small-font-size);
+  }
 `;
