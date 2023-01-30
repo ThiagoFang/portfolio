@@ -24,6 +24,16 @@ export const BlackArea = styled.div`
   }
 `;
 
+export const CloseModal = styled.i`
+  color: #fff;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: var(--h2-font-size);
+  cursor: pointer;
+  z-index: 3;
+`;
+
 export const Modal = styled.div`
   position: fixed;
   flex-direction: column;

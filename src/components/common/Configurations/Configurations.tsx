@@ -1,6 +1,7 @@
 import * as C from "./styles";
 import { useConfig, ConfigActions } from "../../../context/ConfigContext";
 import { useState } from "react";
+import { Appearance } from "./Appearance";
 
 export const Configurations = () => {
   const [page, setPage] = useState("appearance");
@@ -14,6 +15,7 @@ export const Configurations = () => {
   return (
     <>
       <C.Modal className={state.settings ? "active" : ""}>
+        <C.CloseModal className="ri-close-fill" onClick={handleCloseModal} />
         <C.FlexArea>
           <C.OptionsList>
             <C.ConfigOption
@@ -31,6 +33,8 @@ export const Configurations = () => {
               Linguagem
             </C.ConfigOption>
           </C.OptionsList>
+
+          {page === "appearance" && <Appearance />}
         </C.FlexArea>
       </C.Modal>
       <C.BlackArea
