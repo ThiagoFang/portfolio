@@ -4,11 +4,19 @@ import { useConfig, ConfigActions } from "../../../context/ConfigContext";
 export const Configurations = () => {
   const { state, dispatch } = useConfig();
 
+  const handleCloseModal = () => {
+    dispatch({ type: ConfigActions.setSettings, payload: false });
+  };
+
   return (
-    <C.BlackArea>
-      <C.Modal>
+    <>
+      <C.Modal className={state.settings ? "active" : ""}>
         <div>Configurations</div>
       </C.Modal>
-    </C.BlackArea>
+      <C.BlackArea
+        className={state.settings ? "active" : ""}
+        onClick={handleCloseModal}
+      />
+    </>
   );
 };

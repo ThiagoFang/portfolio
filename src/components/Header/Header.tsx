@@ -3,6 +3,7 @@ import * as C from "./styles";
 import { ColorsActions, useColors } from "../../context/SettingsContext";
 import { MobileMenu } from "../common/MobileMenu";
 import { useState } from "react";
+import { OpenSettingsButton } from "../common/OpenSettingsButton";
 
 export const Header = () => {
   const [mobileMenu, setMobileMenu] = useState<boolean>(false);
@@ -72,7 +73,7 @@ export const Header = () => {
               className="ri-contrast-2-line icon"
               onClick={changeMainColor}
             ></i>
-            <i className="ri-settings-3-line icon"></i>
+            <OpenSettingsButton />
           </C.IconsArea>
         </C.Container>
       </C.Header>
