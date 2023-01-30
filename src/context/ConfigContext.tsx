@@ -2,6 +2,7 @@ import { createContext, ReactNode, useContext, useReducer } from "react";
 
 type State = {
   initialLoading: boolean;
+  settings: boolean;
 };
 
 type Action = {
@@ -20,6 +21,7 @@ type ProviderChildren = {
 
 const initialData: State = {
   initialLoading: true,
+  settings: false,
 };
 
 //Context
@@ -28,12 +30,15 @@ const ConfigContext = createContext<ContextType | undefined>(undefined);
 //Reducer
 export enum ConfigActions {
   setInitialLoading,
+  setSettings,
 }
 
 export const configReducer = (state: State, action: Action) => {
   switch (action.type) {
     case ConfigActions.setInitialLoading:
       return { ...state, initialLoading: action.payload };
+    case ConfigActions.setSettings:
+      return { ...state, settings: action.payload };
     default:
       return state;
   }
