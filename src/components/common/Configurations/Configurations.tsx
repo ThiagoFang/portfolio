@@ -24,14 +24,14 @@ export const Configurations = () => {
               className={page === "appearance" ? "selected" : ""}
             >
               <i className="ri-palette-fill" />
-              Aparencia
+              {state.language === "pt" ? "Aparência" : "Appearance"}
             </C.ConfigOption>
             <C.ConfigOption
               onClick={() => setPage("language")}
               className={page === "language" ? "selected" : ""}
             >
               <i className="ri-earth-fill" />
-              Linguagem
+              {state.language === "pt" ? "Idioma" : "Language"}
             </C.ConfigOption>
           </C.OptionsList>
 

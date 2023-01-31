@@ -1,11 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import { ColorsActions, useColors } from "../../../../context/SettingsContext";
+import { useConfig } from "../../../../context/ConfigContext";
 import * as C from "./styles";
 
 export const Appearance = () => {
   const [mainColor, setMainColor] = useState("#1DE9B6");
 
   const { state, dispatch } = useColors();
+  const configs = useConfig().state;
 
   const inputRef: React.MutableRefObject<HTMLInputElement | null> =
     useRef(null);
@@ -21,31 +23,43 @@ export const Appearance = () => {
   return (
     <C.Container>
       <C.TitleArea>
-        <C.Title>Aparencia</C.Title>
+        <C.Title>{configs.language === "pt" ? "Aparência" : "Style"}</C.Title>
         <C.SubTitle>
-          Aqui você pode brincar e personalizar um pouco a aparencia do site!
+          {configs.language === "pt" && (
+            <>
+              Aqui você pode brincar e personalizar um pouco a aparencia do
+              site!
+            </>
+          )}
+          {configs.language === "en" && (
+            <>Here you can customize the appearance of the App a bit!</>
+          )}
         </C.SubTitle>
       </C.TitleArea>
       <C.Section>
-        <C.SectionTitle>Cor Principal</C.SectionTitle>
+        <C.SectionTitle>
+          {configs.language === "pt" ? "Cor Principal" : "Main Color"}
+        </C.SectionTitle>
         <C.SelectArea>
           <C.SelectOption onClick={() => setMainColor("#1DE9B6")}>
             <C.SelectBox
               className={mainColor === "#1DE9B6" ? "selected" : ""}
             />
-            Verde Água
+            {configs.language === "pt" ? "Verde Água" : "Aqua Green"}
           </C.SelectOption>
 
           <C.SelectOption onClick={() => setMainColor("#CC30FF")}>
             <C.SelectBox
               className={mainColor === "#CC30FF" ? "selected" : ""}
             />
-            Roxo
+            {configs.language === "pt" ? "Roxo" : "Purple"}
           </C.SelectOption>
         </C.SelectArea>
       </C.Section>
       <C.Section>
-        <C.SectionTitle>Cor Personalizada</C.SectionTitle>
+        <C.SectionTitle>
+          {configs.language === "pt" ? "Cor Personalizada" : "Custom Color"}
+        </C.SectionTitle>
         <C.ChooseColor
           onClick={() => {
             inputRef.current?.click();
@@ -56,7 +70,7 @@ export const Appearance = () => {
             type="color"
             onChange={(e) => setMainColor(e.target.value)}
           />
-          Escolha uma cor
+          {configs.language === "pt" ? "Escolha uma cor" : "Choose a color"}
           <C.ShowColor color={mainColor} />
         </C.ChooseColor>
       </C.Section>

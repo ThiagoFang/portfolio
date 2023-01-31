@@ -11,7 +11,7 @@ export const Languages = () => {
   return (
     <C.Container>
       <C.TitleArea>
-        <C.Title>{state.language === "pt" ? "Linguagem" : "Language"}</C.Title>
+        <C.Title>{state.language === "pt" ? "Idioma" : "Language"}</C.Title>
         <C.SubTitle>
           {state.language === "pt" && (
             <>Aqui você pode mudar o idioma principal do site</>
