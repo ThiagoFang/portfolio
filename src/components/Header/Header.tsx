@@ -4,11 +4,13 @@ import { ColorsActions, useColors } from "../../context/SettingsContext";
 import { MobileMenu } from "../common/MobileMenu";
 import { useState } from "react";
 import { OpenSettingsButton } from "../common/OpenSettingsButton";
+import { useConfig } from "../../context/ConfigContext";
 
 export const Header = () => {
   const [mobileMenu, setMobileMenu] = useState<boolean>(false);
 
   const { state, dispatch } = useColors();
+  const configs = useConfig().state;
 
   const location = useLocation();
   const navigate = useNavigate();
@@ -40,31 +42,31 @@ export const Header = () => {
                 className={location.pathname === "/" ? "selected" : ""}
                 onClick={() => navigate("/")}
               >
-                Home
+                {configs.language === "pt" ? "Inicio" : "Home"}
               </C.NavItem>
               <C.NavItem
                 className={location.pathname === "/about" ? "selected" : ""}
                 onClick={() => navigate("/about")}
               >
-                Sobre Mim
+                {configs.language === "pt" ? "Sobre Mim" : "About Me"}
               </C.NavItem>
               <C.NavItem
                 className={location.pathname === "/projects" ? "selected" : ""}
                 onClick={() => navigate("/projects")}
               >
-                Projetos
+                {configs.language === "pt" ? "Projetos" : "Projects"}
               </C.NavItem>
               <C.NavItem
                 className={location.pathname === "/art" ? "selected" : ""}
                 onClick={() => navigate("/art")}
               >
-                Art
+                {configs.language === "pt" ? "Arte" : "Art"}
               </C.NavItem>
               <C.NavItem
                 className={location.pathname === "/contact" ? "selected" : ""}
                 onClick={() => navigate("/contact")}
               >
-                Contato
+                {configs.language === "pt" ? "Contato" : "Contact"}
               </C.NavItem>
             </C.NavMenu>
           </C.NavArea>
