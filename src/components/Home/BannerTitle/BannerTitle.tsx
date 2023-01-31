@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react";
 import { LinkButton } from "../../common/Buttons/LinkButton";
+import { useConfig } from "../../../context/ConfigContext";
 import * as C from "./styles";
 
 export const BannerTitle = () => {
+  const configs = useConfig().state;
+
   return (
     <C.Containter>
       <C.TitleBox>
@@ -15,7 +17,10 @@ export const BannerTitle = () => {
           <C.WordBox>FrontEnd</C.WordBox>
         </C.WordsBox>
       </C.TitleBox>
-      <C.SubTitle>Desenvolvimento ágil e eficiente</C.SubTitle>
+      <C.SubTitle>
+        {configs.language === "pt" && <>Desenvolvimento ágil e eficiente</>}
+        {configs.language === "en" && <>Agile and efficient development.</>}
+      </C.SubTitle>
       <C.ButtonsArea>
         <LinkButton
           title="GitHub"
