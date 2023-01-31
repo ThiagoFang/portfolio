@@ -55,6 +55,10 @@ export const SelectOption = styled.div`
   align-items: center;
   gap: 0.4rem;
   cursor: pointer;
+
+  &:hover div {
+    background-color: var(--main-color);
+  }
 `;
 
 export const ColorInput = styled.input`

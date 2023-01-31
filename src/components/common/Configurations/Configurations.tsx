@@ -2,6 +2,7 @@ import * as C from "./styles";
 import { useConfig, ConfigActions } from "../../../context/ConfigContext";
 import { useState } from "react";
 import { Appearance } from "./Appearance";
+import { Languages } from "./Languages";
 
 export const Configurations = () => {
   const [page, setPage] = useState("appearance");
@@ -35,6 +36,7 @@ export const Configurations = () => {
           </C.OptionsList>
 
           {page === "appearance" && <Appearance />}
+          {page === "language" && <Languages />}
         </C.FlexArea>
       </C.Modal>
       <C.BlackArea
