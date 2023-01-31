@@ -50,6 +50,10 @@ export const Modal = styled.div`
   box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.8);
   overflow: hidden;
 
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+
   &.active {
     display: flex;
     animation: appear 0.1s linear;

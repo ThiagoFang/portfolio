@@ -29,4 +29,29 @@ export const Section = styled.div`
 
 export const SectionTitle = styled.h3`
   font-size: var(--small-font-size);
+  margin-bottom: 0.8rem;
+`;
+
+export const SelectArea = styled.div`
+  display: flex;
+  gap: 1.6rem;
+`;
+
+export const SelectBox = styled.div`
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: var(--secondary-background);
+  border-radius: 50%;
+  border: 1px solid var(--main-color);
+
+  &.selected {
+    background-color: var(--main-color);
+  }
+`;
+
+export const SelectOption = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
 `;
