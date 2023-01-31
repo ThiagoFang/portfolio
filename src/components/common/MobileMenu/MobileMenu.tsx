@@ -1,4 +1,5 @@
 import { useLocation, useNavigate } from "react-router-dom";
+import { OpenSettingsButton } from "../OpenSettingsButton";
 import * as C from "./styles";
 
 interface IProps {
@@ -51,6 +52,9 @@ export const MobileMenu = ({ menu, changeAction }: IProps) => {
           className={location.pathname === "/contact" ? "selected" : ""}
         >
           CONTATO
+        </C.NavItem>
+        <C.NavItem id="settingsIcon" onClick={() => changeAction(false)}>
+          <OpenSettingsButton />
         </C.NavItem>
       </C.NavArea>
     </C.Container>

@@ -7,5 +7,11 @@ export const OpenSettingsButton = () => {
     dispatch({ type: ConfigActions.setSettings, payload: true });
   };
 
-  return <i className="ri-settings-3-line icon" onClick={handleOpenModal} />;
+  return (
+    <i
+      id="settingsIcon"
+      className="ri-settings-3-line icon"
+      onClick={handleOpenModal}
+    />
+  );
 };

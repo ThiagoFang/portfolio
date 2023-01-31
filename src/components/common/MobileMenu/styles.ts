@@ -32,6 +32,10 @@ export const NavArea = styled.ul`
   margin-top: 3.2rem;
   gap: 2.4rem;
   align-items: center;
+
+  #settingsIcon {
+    display: flex;
+  }
 `;
 
 export const NavItem = styled.li`
@@ -42,5 +46,9 @@ export const NavItem = styled.li`
 
   &.selected {
     color: var(--text-color);
+  }
+  &#settingsIcon {
+    color: var(--main-color);
+    font-weight: 500;
   }
 `;
