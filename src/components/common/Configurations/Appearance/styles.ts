@@ -25,6 +25,7 @@ export const SubTitle = styled.p`
 
 export const Section = styled.div`
   padding: 0.8rem 0 2.4rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 `;
 
 export const SectionTitle = styled.h3`
@@ -54,4 +55,26 @@ export const SelectOption = styled.div`
   align-items: center;
   gap: 0.4rem;
   cursor: pointer;
+`;
+
+export const ColorInput = styled.input`
+  width: 1px;
+  height: 1px;
+  margin-top: 1.2rem;
+  opacity: 0;
+`;
+
+export const ChooseColor = styled.div`
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: var(--normal-font-size);
+`;
+
+export const ShowColor = styled.div<{ color: string }>`
+  width: 3rem;
+  height: 2rem;
+  border-radius: 0.2rem;
+  margin-left: 0.8rem;
+  background-color: ${(p) => p.color};
 `;
