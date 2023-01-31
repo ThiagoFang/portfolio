@@ -3,6 +3,7 @@ import { createContext, ReactNode, useContext, useReducer } from "react";
 type State = {
   initialLoading: boolean;
   settings: boolean;
+  language: string;
 };
 
 type Action = {
@@ -22,6 +23,7 @@ type ProviderChildren = {
 const initialData: State = {
   initialLoading: true,
   settings: false,
+  language: "pt",
 };
 
 //Context
@@ -31,6 +33,7 @@ const ConfigContext = createContext<ContextType | undefined>(undefined);
 export enum ConfigActions {
   setInitialLoading,
   setSettings,
+  setLanguage,
 }
 
 export const configReducer = (state: State, action: Action) => {
@@ -39,6 +42,8 @@ export const configReducer = (state: State, action: Action) => {
       return { ...state, initialLoading: action.payload };
     case ConfigActions.setSettings:
       return { ...state, settings: action.payload };
+    case ConfigActions.setLanguage:
+      return { ...state, language: action.payload };
     default:
       return state;
   }
