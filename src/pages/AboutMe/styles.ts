@@ -3,8 +3,6 @@ import styled from "styled-components";
 const imageLink =
   "https://i.postimg.cc/L6Nxtc97/josh-art-highly-detailed-central-composition-studio-photogreaph-796fe0b5-46d8-45b5-a625-a6f0d379825c.png";
 
-const warning = "Imagem gerada por IA";
-
 export const Container = styled.div`
   position: relative;
   min-height: 100vh;
@@ -28,7 +26,7 @@ export const MainContent = styled.div`
   }
 `;
 
-export const ImageArea = styled.div`
+export const ImageArea = styled.div<{ warning: string }>`
   position: relative;
   width: 400px;
   height: 520px;
@@ -53,7 +51,7 @@ export const ImageArea = styled.div`
   }
 
   ::before {
-    content: "${warning}";
+    content: "${(p) => p.warning}";
     color: var(--text-light);
     opacity: 0.8;
     font-size: var(--smaller-font-size);
