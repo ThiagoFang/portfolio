@@ -6,6 +6,9 @@ import { ConfigActions, useConfig } from "../../context/ConfigContext";
 import { SocialMedias } from "../../helpers/SocialMedia";
 import * as C from "./styles";
 
+const resumeLink =
+  "https://drive.google.com/drive/folders/1UAOnXYuI-NMZW0B8O1Z3PDIG7_yoDi9S?usp=share_link";
+
 const PortugueseDesc = () => {
   return (
     <>
@@ -95,7 +98,7 @@ export const AboutMe = () => {
               icon="ri-download-line"
               isLink
               title={state.language === "pt" ? "Curriculo" : "Resume"}
-              to=""
+              to={resumeLink}
               id="AboutCurriculumBtn"
             />
             <NoBGButton
