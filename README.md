@@ -1,4 +1,4 @@
-# **JavaScript Fighting Game**
+# **PERSONAL PORTFOLIO**
 
 ![print do projeto](print.png)
 
