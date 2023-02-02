@@ -11,8 +11,11 @@ import { IContactForm } from "../../types/IContactForm";
 import { SubmitHandler } from "react-hook-form/dist/types";
 
 import * as C from "./styles";
+import { useConfig } from "../../context/ConfigContext";
 
 export const Contact = () => {
+  const { state } = useConfig();
+
   const {
     register,
     handleSubmit,
@@ -36,7 +39,10 @@ export const Contact = () => {
         id="contactTitle"
       />
       <C.Form onSubmit={handleSubmit(submitForm)}>
-        <InputBox title="Seu nome" error={errors.name?.message}>
+        <InputBox
+          title={state.language === "pt" ? "Nome" : "Name"}
+          error={errors.name?.message}
+        >
           <C.BasicInput
             className={errors.name ? "error" : ""}
             {...register("name")}
@@ -53,7 +59,7 @@ export const Contact = () => {
         <InputBox
           id="contactTextArea"
           error={errors.message?.message}
-          title="Mensagem"
+          title={state.language === "pt" ? "Mensagem" : "Message"}
         >
           <C.TextArea
             className={errors.message ? "error" : ""}
@@ -64,14 +70,18 @@ export const Contact = () => {
         <C.ButtonsArea id="buttonsArea">
           <FilledButton
             icon="ri-arrow-right-s-fill"
-            title="Enviar"
+            title={state.language === "pt" ? "Enviar" : "Submit"}
             isLink={false}
             to=""
           />
           <NoBGButton
             icon="ri-arrow-right-up-line"
             isLink={false}
-            title="Ou Entre em contato via whatsapp"
+            title={
+              state.language === "pt"
+                ? "Ou entre em contato via WhatsApp"
+                : "Or contact me via WhatsApp."
+            }
             to=""
             action={handleNavigateWhatsApp}
           />
