@@ -6,12 +6,16 @@ export type Techs =
   | "react"
   | "node";
 
+interface IDescriptions {
+  short: string;
+  about: string;
+  experience: string;
+}
 export interface IProject {
   title: string;
   description: {
-    short: string;
-    about: string;
-    experience: string;
+    pt: IDescriptions;
+    en: IDescriptions;
   };
   shortName: string;
   image: string;
