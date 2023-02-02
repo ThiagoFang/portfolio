@@ -1,6 +1,6 @@
 import * as C from "./styles";
 import { useConfig, ConfigActions } from "../../../context/ConfigContext";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Appearance } from "./Appearance";
 import { Languages } from "./Languages";
 
@@ -12,6 +12,14 @@ export const Configurations = () => {
   const handleCloseModal = () => {
     dispatch({ type: ConfigActions.setSettings, payload: false });
   };
+
+  useEffect(() => {
+    document.addEventListener("keydown", (e: KeyboardEvent) => {
+      if (state.initialLoading && e.key === "Escape") {
+        handleCloseModal();
+      }
+    });
+  }, []);
 
   return (
     <>
