@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useConfig } from "../../../context/ConfigContext";
 import { FilledButton } from "../../common/Buttons/FilledButton";
 import { NoBGButton } from "../../common/Buttons/NoBGButton";
 
@@ -32,13 +33,15 @@ interface IProps {
 }
 
 export const Buttons = ({ github, external }: IProps) => {
+  const { state } = useConfig();
+
   return (
     <ButtonsArea>
       {external && github && (
         <FilledButton
           icon="ri-arrow-right-up-line"
           isLink
-          title="Acessar"
+          title={state.language === "pt" ? "Acessar" : "Access"}
           to={external}
           id="externalProjectDetail"
         />

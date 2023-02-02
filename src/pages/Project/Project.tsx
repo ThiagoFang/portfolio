@@ -7,9 +7,13 @@ import { techRedirect } from "../../helpers/techRedirect";
 import { InfoField } from "../../components/Projects/InfoField";
 import { Buttons } from "../../components/Projects/Buttons";
 import { DigitalClock } from "../../components/Home/DigitalClock";
+import { useConfig } from "../../context/ConfigContext";
 
 export const Project = () => {
   const [project, setProject] = useState<IProject>();
+  const [language, setLanguage] = useState<"pt" | "en">("pt");
+
+  const { state } = useConfig();
 
   const params = useParams();
 
@@ -20,6 +24,10 @@ export const Project = () => {
       }
     }
   }, []);
+
+  useEffect(() => {
+    setLanguage(state.language as "pt" | "en");
+  }, [state.language]);
 
   return (
     <C.Container>
@@ -40,13 +48,13 @@ export const Project = () => {
             </C.TechsArea>
             <InfoField
               icon="ri-focus-2-line"
-              title="Sobre"
-              text={project.description.about}
+              title={language === "pt" ? "Sobre" : "About"}
+              text={project.description[language].about}
             />
             <InfoField
               icon="ri-clipboard-line"
-              title="Minha Experiência"
-              text={project.description.experience}
+              title={language === "pt" ? "Minha Expêriencia" : "My Experience"}
+              text={project.description[language].experience}
             />
             <Buttons
               github={project.links.github}

@@ -2,6 +2,7 @@ import { ExpandableButton } from "../../common/Buttons/ExpandableButton";
 import { IProject } from "../../../types/IProjects";
 import * as C from "./styles";
 import { techRedirect } from "../../../helpers/techRedirect";
+import { useConfig } from "../../../context/ConfigContext";
 
 export const ProjectBox = ({
   title,
@@ -11,6 +12,8 @@ export const ProjectBox = ({
   shortName,
   techs,
 }: IProject) => {
+  const { state } = useConfig();
+
   return (
     <C.Box img={image}>
       <C.TechsArea>
@@ -25,7 +28,11 @@ export const ProjectBox = ({
 
       <C.BlurArea>
         <C.Title>{title}</C.Title>
-        <C.SubTitle>{description.short}</C.SubTitle>
+        <C.SubTitle>
+          {state.language === "pt"
+            ? description.pt.short
+            : description.en.short}
+        </C.SubTitle>
         <C.ButtonsArea>
           <ExpandableButton
             to={`/projects/${shortName}`}
