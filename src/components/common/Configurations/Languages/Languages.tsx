@@ -1,12 +1,25 @@
 import * as C from "./styles";
 import { ConfigActions, useConfig } from "../../../../context/ConfigContext";
+import { useEffect } from "react";
 
 export const Languages = () => {
   const { state, dispatch } = useConfig();
 
   const handleChangeLanguade = (language: string) => {
     dispatch({ type: ConfigActions.setLanguage, payload: language });
+    localStorage.setItem("language", language);
   };
+
+  const getLocalStorage = () => {
+    const info = localStorage.getItem("language");
+    if (info != null) {
+      dispatch({ type: ConfigActions.setLanguage, payload: info });
+    }
+  };
+
+  useEffect(() => {
+    getLocalStorage();
+  }, []);
 
   return (
     <C.Container>
