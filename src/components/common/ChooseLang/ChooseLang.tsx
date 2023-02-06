@@ -27,9 +27,15 @@ export const ChooseLang = () => {
     <C.Container status={status}>
       <C.Content>
         <C.InfoBox>
-          <C.Title>Olá, Primeira vez aqui?</C.Title>
+          <C.Title>
+            {state.language === "pt"
+              ? "Olá, Primeira vez aqui?"
+              : "Hi! First time here?"}
+          </C.Title>
           <C.SubTitle>
-            Escolha o idioma qual deseja ver o meu portfolio
+            {state.language === "pt"
+              ? "Escolha o idioma qual deseja ver o meu portfolio"
+              : "Choose the language in which you want to see my portfolio"}
           </C.SubTitle>
         </C.InfoBox>
         <C.LanguagesArea>
@@ -49,7 +55,7 @@ export const ChooseLang = () => {
           </C.LanguageBox>
         </C.LanguagesArea>
         <C.Button onClick={handleCloseModal}>
-          Continuar
+          {state.language === "pt" ? "Continuar" : "Continue"}
           <i className="ri-arrow-right-s-line icon"></i>
         </C.Button>
       </C.Content>
