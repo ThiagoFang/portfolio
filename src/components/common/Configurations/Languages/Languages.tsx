@@ -10,17 +10,6 @@ export const Languages = () => {
     localStorage.setItem("language", language);
   };
 
-  const getLocalStorage = () => {
-    const info = localStorage.getItem("language");
-    if (info != null) {
-      dispatch({ type: ConfigActions.setLanguage, payload: info });
-    }
-  };
-
-  useEffect(() => {
-    getLocalStorage();
-  }, []);
-
   return (
     <C.Container>
       <C.TitleArea>
