@@ -2,15 +2,15 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import * as C from "./styles";
 import { ColorsActions, useColors } from "../../context/SettingsContext";
 import { MobileMenu } from "../common/MobileMenu";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { OpenSettingsButton } from "../common/OpenSettingsButton";
-import { useConfig } from "../../context/ConfigContext";
+import { useConfig, ConfigActions } from "../../context/ConfigContext";
 
 export const Header = () => {
   const [mobileMenu, setMobileMenu] = useState<boolean>(false);
 
   const { state, dispatch } = useColors();
-  const configs = useConfig().state;
+  const configs = useConfig();
 
   const location = useLocation();
   const navigate = useNavigate();
@@ -22,6 +22,17 @@ export const Header = () => {
     }
     dispatch({ type: ColorsActions.setMainColor, payload: "#1DE9B6" });
   };
+
+  const getLocalStorage = () => {
+    const info = localStorage.getItem("language");
+    if (info != null) {
+      configs.dispatch({ type: ConfigActions.setLanguage, payload: info });
+    }
+  };
+
+  useEffect(() => {
+    getLocalStorage();
+  }, []);
 
   return (
     <>
@@ -42,31 +53,31 @@ export const Header = () => {
                 className={location.pathname === "/" ? "selected" : ""}
                 onClick={() => navigate("/")}
               >
-                {configs.language === "pt" ? "Inicio" : "Home"}
+                {configs.state.language === "pt" ? "Inicio" : "Home"}
               </C.NavItem>
               <C.NavItem
                 className={location.pathname === "/about" ? "selected" : ""}
                 onClick={() => navigate("/about")}
               >
-                {configs.language === "pt" ? "Sobre Mim" : "About Me"}
+                {configs.state.language === "pt" ? "Sobre Mim" : "About Me"}
               </C.NavItem>
               <C.NavItem
                 className={location.pathname === "/projects" ? "selected" : ""}
                 onClick={() => navigate("/projects")}
               >
-                {configs.language === "pt" ? "Projetos" : "Projects"}
+                {configs.state.language === "pt" ? "Projetos" : "Projects"}
               </C.NavItem>
               <C.NavItem
                 className={location.pathname === "/art" ? "selected" : ""}
                 onClick={() => navigate("/art")}
               >
-                {configs.language === "pt" ? "Arte" : "Art"}
+                {configs.state.language === "pt" ? "Arte" : "Art"}
               </C.NavItem>
               <C.NavItem
                 className={location.pathname === "/contact" ? "selected" : ""}
                 onClick={() => navigate("/contact")}
               >
-                {configs.language === "pt" ? "Contato" : "Contact"}
+                {configs.state.language === "pt" ? "Contato" : "Contact"}
               </C.NavItem>
             </C.NavMenu>
           </C.NavArea>
