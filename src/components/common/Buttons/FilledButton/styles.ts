@@ -24,6 +24,9 @@ export const Container = styled.button`
       transform: translateX(2px);
     }
   }
+  :active {
+    opacity: 0.9;
+  }
 
   @media screen and (max-height: 768px) {
     font-size: var(--small-font-size);

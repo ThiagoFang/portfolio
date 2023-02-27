@@ -33,6 +33,7 @@ export const SubTitle = styled.p`
   font-size: var(--normal-font-size);
   color: var(--text-light);
   margin-top: 0.2rem;
+  max-width: 80vw;
 `;
 
 export const LanguagesArea = styled.div`

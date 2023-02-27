@@ -83,6 +83,9 @@ export const NavItem = styled.li`
   &:hover {
     color: var(--text-color);
   }
+  :active {
+    opacity: 0.7;
+  }
 
   &.selected {
     color: var(--text-color);
@@ -116,6 +119,10 @@ export const IconsArea = styled.div`
 
     &:hover {
       color: var(--main-color);
+    }
+    :active {
+      opacity: 0.7;
+      transform: scale(0.99);
     }
 
     @media screen and (max-width: 1024px) {
