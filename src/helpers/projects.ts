@@ -2,6 +2,32 @@ import { Projects } from "../types/IProjects";
 
 export const projects: Projects = [
   {
+    title: "UI Figma Jam",
+    description: {
+      pt: {
+        short: "Uma replicação da UI do figma jam.",
+        about:
+          "Uma replicação da UI do figma jam com algums funcionalidades integradas, como adicionar nodes, mover e até criar ligações.",
+        experience:
+          "Fiz esse projeto sobre orientação do professor Diego da RockerSeat, foi muito bom para conhecer um pouco das capacidades da bliblioteca React flow, e entender um pouco sobre o TailWind CSS.",
+      },
+      en: {
+        short: "A replication of the Figma Jam UI.",
+        about:
+          "A replication of the Figma Jam UI with some integrated functionalities such as adding nodes, moving them around, and even creating connections.",
+        experience:
+          "I made this project under the guidance of Professor Diego from RockerSeat, and it was really helpful in getting to know the capabilities of the React Flow library and understanding a bit about Tailwind CSS.",
+      },
+    },
+    shortName: "figjam",
+    image: "https://i.postimg.cc/VLLFCJLL/figjamjpg.jpg",
+    links: {
+      github: "https://github.com/ThiagoFang/ui-figma-jam",
+      external: "https://ui-figma-jam-eta.vercel.app/",
+    },
+    techs: ["html", "css", "javascript", "typescript", "react"],
+  },
+  {
     title: "Halloween Responsive Website",
     description: {
       pt: {

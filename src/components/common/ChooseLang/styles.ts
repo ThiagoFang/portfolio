@@ -16,6 +16,10 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
+
+  @media screen and (max-width: 425px) {
+    padding: 1.6rem;
+  }
 `;
 
 export const InfoBox = styled.div``;
