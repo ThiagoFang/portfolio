@@ -35,6 +35,9 @@ export const Containter = styled.button`
   &:hover::before {
     width: 200%;
   }
+  :active {
+    opacity: 0.7;
+  }
 
   &:hover span {
     color: var(--text-secondary);

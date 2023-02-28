@@ -16,6 +16,10 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
+
+  @media screen and (max-width: 425px) {
+    padding: 1.6rem;
+  }
 `;
 
 export const InfoBox = styled.div``;
@@ -29,6 +33,7 @@ export const SubTitle = styled.p`
   font-size: var(--normal-font-size);
   color: var(--text-light);
   margin-top: 0.2rem;
+  max-width: 80vw;
 `;
 
 export const LanguagesArea = styled.div`
